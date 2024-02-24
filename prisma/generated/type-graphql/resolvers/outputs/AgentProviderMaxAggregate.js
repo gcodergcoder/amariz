@@ -6,10 +6,10 @@ const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
 let AgentProviderMaxAggregate = exports.AgentProviderMaxAggregate = class AgentProviderMaxAggregate {
 };
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => TypeGraphQL.Int, {
+    TypeGraphQL.Field(_type => String, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", Number)
+    tslib_1.__metadata("design:type", String)
 ], AgentProviderMaxAggregate.prototype, "id", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => Date, {
@@ -48,10 +48,10 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", String)
 ], AgentProviderMaxAggregate.prototype, "phone", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => TypeGraphQL.Int, {
+    TypeGraphQL.Field(_type => String, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", Number)
+    tslib_1.__metadata("design:type", String)
 ], AgentProviderMaxAggregate.prototype, "providerId", void 0);
 exports.AgentProviderMaxAggregate = AgentProviderMaxAggregate = tslib_1.__decorate([
     TypeGraphQL.ObjectType("AgentProviderMaxAggregate", {})

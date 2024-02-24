@@ -6,10 +6,10 @@ const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
 let ProvidersMinAggregate = exports.ProvidersMinAggregate = class ProvidersMinAggregate {
 };
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => TypeGraphQL.Int, {
+    TypeGraphQL.Field(_type => String, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", Number)
+    tslib_1.__metadata("design:type", String)
 ], ProvidersMinAggregate.prototype, "id", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => Date, {
@@ -40,7 +40,7 @@ tslib_1.__decorate([
         nullable: true
     }),
     tslib_1.__metadata("design:type", String)
-], ProvidersMinAggregate.prototype, "addredd", void 0);
+], ProvidersMinAggregate.prototype, "address", void 0);
 exports.ProvidersMinAggregate = ProvidersMinAggregate = tslib_1.__decorate([
     TypeGraphQL.ObjectType("ProvidersMinAggregate", {})
 ], ProvidersMinAggregate);

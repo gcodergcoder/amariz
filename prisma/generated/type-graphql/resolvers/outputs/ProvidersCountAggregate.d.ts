@@ -4,6 +4,6 @@ export declare class ProvidersCountAggregate {
     updatedAt: number;
     name: number;
     nit: number;
-    addredd: number;
+    address: number;
     _all: number;
 }

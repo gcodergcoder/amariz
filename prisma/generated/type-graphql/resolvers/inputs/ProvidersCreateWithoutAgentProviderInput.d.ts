@@ -1,7 +1,8 @@
 export declare class ProvidersCreateWithoutAgentProviderInput {
+    id?: string | undefined;
     createdAt?: Date | undefined;
     updatedAt?: Date | undefined;
     name: string;
     nit: string;
-    addredd: string;
+    address: string;
 }

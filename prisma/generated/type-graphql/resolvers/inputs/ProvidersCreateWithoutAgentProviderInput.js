@@ -6,6 +6,12 @@ const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
 let ProvidersCreateWithoutAgentProviderInput = exports.ProvidersCreateWithoutAgentProviderInput = class ProvidersCreateWithoutAgentProviderInput {
 };
 tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], ProvidersCreateWithoutAgentProviderInput.prototype, "id", void 0);
+tslib_1.__decorate([
     TypeGraphQL.Field(_type => Date, {
         nullable: true
     }),
@@ -34,7 +40,7 @@ tslib_1.__decorate([
         nullable: false
     }),
     tslib_1.__metadata("design:type", String)
-], ProvidersCreateWithoutAgentProviderInput.prototype, "addredd", void 0);
+], ProvidersCreateWithoutAgentProviderInput.prototype, "address", void 0);
 exports.ProvidersCreateWithoutAgentProviderInput = ProvidersCreateWithoutAgentProviderInput = tslib_1.__decorate([
     TypeGraphQL.InputType("ProvidersCreateWithoutAgentProviderInput", {})
 ], ProvidersCreateWithoutAgentProviderInput);

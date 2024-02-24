@@ -6,7 +6,7 @@ const LIST_PROVIDER = gql`
     id
     name
     nit
-    addredd
+    address
     updatedAt
     agentProvider {
       id
@@ -14,6 +14,7 @@ const LIST_PROVIDER = gql`
       surName
       phone
       email
+      providerId
       createdAt
       updatedAt
     }

@@ -7,5 +7,5 @@ export declare class FindManyProvidersArgs {
     cursor?: ProvidersWhereUniqueInput | undefined;
     take?: number | undefined;
     skip?: number | undefined;
-    distinct?: Array<"id" | "createdAt" | "updatedAt" | "name" | "nit" | "addredd"> | undefined;
+    distinct?: Array<"id" | "createdAt" | "updatedAt" | "name" | "nit" | "address"> | undefined;
 }

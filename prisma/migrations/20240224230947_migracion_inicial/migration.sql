@@ -1,25 +1,25 @@
 -- CreateTable
 CREATE TABLE "Providers" (
-    "id" SERIAL NOT NULL,
+    "id" TEXT NOT NULL,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updatedAt" TIMESTAMP(3) NOT NULL,
     "name" TEXT NOT NULL,
     "nit" TEXT NOT NULL,
-    "addredd" TEXT NOT NULL,
+    "address" TEXT NOT NULL,
 
     CONSTRAINT "Providers_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateTable
 CREATE TABLE "AgentProvider" (
-    "id" SERIAL NOT NULL,
+    "id" TEXT NOT NULL,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updatedAt" TIMESTAMP(3) NOT NULL,
     "name" TEXT NOT NULL,
     "surName" TEXT NOT NULL,
     "email" TEXT NOT NULL,
     "phone" TEXT NOT NULL,
-    "providerId" INTEGER NOT NULL,
+    "providerId" TEXT NOT NULL,
 
     CONSTRAINT "AgentProvider_pkey" PRIMARY KEY ("id")
 );

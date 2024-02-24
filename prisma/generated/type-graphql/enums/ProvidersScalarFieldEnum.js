@@ -10,7 +10,7 @@ var ProvidersScalarFieldEnum;
     ProvidersScalarFieldEnum["updatedAt"] = "updatedAt";
     ProvidersScalarFieldEnum["name"] = "name";
     ProvidersScalarFieldEnum["nit"] = "nit";
-    ProvidersScalarFieldEnum["addredd"] = "addredd";
+    ProvidersScalarFieldEnum["address"] = "address";
 })(ProvidersScalarFieldEnum || (exports.ProvidersScalarFieldEnum = ProvidersScalarFieldEnum = {}));
 TypeGraphQL.registerEnumType(ProvidersScalarFieldEnum, {
     name: "ProvidersScalarFieldEnum",

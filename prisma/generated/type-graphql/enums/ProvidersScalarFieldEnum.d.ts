@@ -4,5 +4,5 @@ export declare enum ProvidersScalarFieldEnum {
     updatedAt = "updatedAt",
     name = "name",
     nit = "nit",
-    addredd = "addredd"
+    address = "address"
 }

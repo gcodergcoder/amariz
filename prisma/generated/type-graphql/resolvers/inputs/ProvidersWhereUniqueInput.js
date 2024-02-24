@@ -10,10 +10,10 @@ const StringFilter_1 = require("../inputs/StringFilter");
 let ProvidersWhereUniqueInput = exports.ProvidersWhereUniqueInput = class ProvidersWhereUniqueInput {
 };
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => TypeGraphQL.Int, {
+    TypeGraphQL.Field(_type => String, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", Number)
+    tslib_1.__metadata("design:type", String)
 ], ProvidersWhereUniqueInput.prototype, "id", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => [ProvidersWhereInput_1.ProvidersWhereInput], {
@@ -62,7 +62,7 @@ tslib_1.__decorate([
         nullable: true
     }),
     tslib_1.__metadata("design:type", StringFilter_1.StringFilter)
-], ProvidersWhereUniqueInput.prototype, "addredd", void 0);
+], ProvidersWhereUniqueInput.prototype, "address", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => AgentProviderListRelationFilter_1.AgentProviderListRelationFilter, {
         nullable: true

@@ -1,10 +1,9 @@
 import { AgentProviderWhereInput } from "../inputs/AgentProviderWhereInput";
 import { DateTimeFilter } from "../inputs/DateTimeFilter";
-import { IntFilter } from "../inputs/IntFilter";
 import { ProvidersRelationFilter } from "../inputs/ProvidersRelationFilter";
 import { StringFilter } from "../inputs/StringFilter";
 export declare class AgentProviderWhereUniqueInput {
-    id?: number | undefined;
+    id?: string | undefined;
     email?: string | undefined;
     AND?: AgentProviderWhereInput[] | undefined;
     OR?: AgentProviderWhereInput[] | undefined;
@@ -14,6 +13,6 @@ export declare class AgentProviderWhereUniqueInput {
     name?: StringFilter | undefined;
     surName?: StringFilter | undefined;
     phone?: StringFilter | undefined;
-    providerId?: IntFilter | undefined;
+    providerId?: StringFilter | undefined;
     provider?: ProvidersRelationFilter | undefined;
 }

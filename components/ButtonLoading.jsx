@@ -6,7 +6,7 @@ const ButtonLoading = ({ type, name, onClick, loading, loadinName= "Guardando...
     return (
             <button
                 onClick={onClick}
-                className={`flex mr-0.5 px-5 py-2 items-center justify-center text-white rounded-2xl font-bold text-sm ${bg}`}
+                className={`flex mr-0.5 px-5 py-2 items-center justify-center text-white rounded-lg font-bold text-sm ${bg}`}
                 type={type}
             >
                 <div className="flex">

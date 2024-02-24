@@ -41,7 +41,7 @@ tslib_1.__decorate([
         nullable: true
     }),
     tslib_1.__metadata("design:type", String)
-], ProvidersMinOrderByAggregateInput.prototype, "addredd", void 0);
+], ProvidersMinOrderByAggregateInput.prototype, "address", void 0);
 exports.ProvidersMinOrderByAggregateInput = ProvidersMinOrderByAggregateInput = tslib_1.__decorate([
     TypeGraphQL.InputType("ProvidersMinOrderByAggregateInput", {})
 ], ProvidersMinOrderByAggregateInput);

@@ -2,6 +2,7 @@ import { DateTimeFieldUpdateOperationsInput } from "../inputs/DateTimeFieldUpdat
 import { ProvidersUpdateOneRequiredWithoutAgentProviderNestedInput } from "../inputs/ProvidersUpdateOneRequiredWithoutAgentProviderNestedInput";
 import { StringFieldUpdateOperationsInput } from "../inputs/StringFieldUpdateOperationsInput";
 export declare class AgentProviderUpdateInput {
+    id?: StringFieldUpdateOperationsInput | undefined;
     createdAt?: DateTimeFieldUpdateOperationsInput | undefined;
     updatedAt?: DateTimeFieldUpdateOperationsInput | undefined;
     name?: StringFieldUpdateOperationsInput | undefined;

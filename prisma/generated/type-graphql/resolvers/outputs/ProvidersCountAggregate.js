@@ -40,7 +40,7 @@ tslib_1.__decorate([
         nullable: false
     }),
     tslib_1.__metadata("design:type", Number)
-], ProvidersCountAggregate.prototype, "addredd", void 0);
+], ProvidersCountAggregate.prototype, "address", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => TypeGraphQL.Int, {
         nullable: false

@@ -5,7 +5,7 @@ const CREATE_PROVIDER = gql`
         createOneProviders(data: $data) {
             name
             nit
-            addredd
+            address
         }
     }
 `;

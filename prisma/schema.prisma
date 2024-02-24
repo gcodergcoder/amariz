@@ -19,7 +19,7 @@ model Providers {
   updatedAt     DateTime        @updatedAt
   name          String
   nit           String
-  addredd       String
+  address       String
   agentProvider AgentProvider[]
 }
 

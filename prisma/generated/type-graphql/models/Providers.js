@@ -7,10 +7,10 @@ const ProvidersCount_1 = require("../resolvers/outputs/ProvidersCount");
 let Providers = exports.Providers = class Providers {
 };
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => TypeGraphQL.Int, {
+    TypeGraphQL.Field(_type => String, {
         nullable: false
     }),
-    tslib_1.__metadata("design:type", Number)
+    tslib_1.__metadata("design:type", String)
 ], Providers.prototype, "id", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => Date, {
@@ -41,7 +41,7 @@ tslib_1.__decorate([
         nullable: false
     }),
     tslib_1.__metadata("design:type", String)
-], Providers.prototype, "addredd", void 0);
+], Providers.prototype, "address", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => ProvidersCount_1.ProvidersCount, {
         nullable: true

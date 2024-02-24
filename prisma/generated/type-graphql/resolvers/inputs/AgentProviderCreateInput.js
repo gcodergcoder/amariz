@@ -7,6 +7,12 @@ const ProvidersCreateNestedOneWithoutAgentProviderInput_1 = require("../inputs/P
 let AgentProviderCreateInput = exports.AgentProviderCreateInput = class AgentProviderCreateInput {
 };
 tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], AgentProviderCreateInput.prototype, "id", void 0);
+tslib_1.__decorate([
     TypeGraphQL.Field(_type => Date, {
         nullable: true
     }),

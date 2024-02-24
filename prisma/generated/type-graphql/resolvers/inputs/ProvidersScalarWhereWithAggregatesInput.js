@@ -5,7 +5,6 @@ exports.ProvidersScalarWhereWithAggregatesInput = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
 const DateTimeWithAggregatesFilter_1 = require("../inputs/DateTimeWithAggregatesFilter");
-const IntWithAggregatesFilter_1 = require("../inputs/IntWithAggregatesFilter");
 const StringWithAggregatesFilter_1 = require("../inputs/StringWithAggregatesFilter");
 let ProvidersScalarWhereWithAggregatesInput = exports.ProvidersScalarWhereWithAggregatesInput = ProvidersScalarWhereWithAggregatesInput_1 = class ProvidersScalarWhereWithAggregatesInput {
 };
@@ -28,10 +27,10 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", Array)
 ], ProvidersScalarWhereWithAggregatesInput.prototype, "NOT", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => IntWithAggregatesFilter_1.IntWithAggregatesFilter, {
+    TypeGraphQL.Field(_type => StringWithAggregatesFilter_1.StringWithAggregatesFilter, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", IntWithAggregatesFilter_1.IntWithAggregatesFilter)
+    tslib_1.__metadata("design:type", StringWithAggregatesFilter_1.StringWithAggregatesFilter)
 ], ProvidersScalarWhereWithAggregatesInput.prototype, "id", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => DateTimeWithAggregatesFilter_1.DateTimeWithAggregatesFilter, {
@@ -62,7 +61,7 @@ tslib_1.__decorate([
         nullable: true
     }),
     tslib_1.__metadata("design:type", StringWithAggregatesFilter_1.StringWithAggregatesFilter)
-], ProvidersScalarWhereWithAggregatesInput.prototype, "addredd", void 0);
+], ProvidersScalarWhereWithAggregatesInput.prototype, "address", void 0);
 exports.ProvidersScalarWhereWithAggregatesInput = ProvidersScalarWhereWithAggregatesInput = ProvidersScalarWhereWithAggregatesInput_1 = tslib_1.__decorate([
     TypeGraphQL.InputType("ProvidersScalarWhereWithAggregatesInput", {})
 ], ProvidersScalarWhereWithAggregatesInput);

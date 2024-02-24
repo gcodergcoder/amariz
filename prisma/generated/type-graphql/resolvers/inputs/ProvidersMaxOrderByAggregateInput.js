@@ -41,7 +41,7 @@ tslib_1.__decorate([
         nullable: true
     }),
     tslib_1.__metadata("design:type", String)
-], ProvidersMaxOrderByAggregateInput.prototype, "addredd", void 0);
+], ProvidersMaxOrderByAggregateInput.prototype, "address", void 0);
 exports.ProvidersMaxOrderByAggregateInput = ProvidersMaxOrderByAggregateInput = tslib_1.__decorate([
     TypeGraphQL.InputType("ProvidersMaxOrderByAggregateInput", {})
 ], ProvidersMaxOrderByAggregateInput);

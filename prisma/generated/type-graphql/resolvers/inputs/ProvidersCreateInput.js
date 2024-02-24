@@ -7,6 +7,12 @@ const AgentProviderCreateNestedManyWithoutProviderInput_1 = require("../inputs/A
 let ProvidersCreateInput = exports.ProvidersCreateInput = class ProvidersCreateInput {
 };
 tslib_1.__decorate([
+    TypeGraphQL.Field(_type => String, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", String)
+], ProvidersCreateInput.prototype, "id", void 0);
+tslib_1.__decorate([
     TypeGraphQL.Field(_type => Date, {
         nullable: true
     }),
@@ -35,7 +41,7 @@ tslib_1.__decorate([
         nullable: false
     }),
     tslib_1.__metadata("design:type", String)
-], ProvidersCreateInput.prototype, "addredd", void 0);
+], ProvidersCreateInput.prototype, "address", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => AgentProviderCreateNestedManyWithoutProviderInput_1.AgentProviderCreateNestedManyWithoutProviderInput, {
         nullable: true

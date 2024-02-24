@@ -5,6 +5,6 @@ export declare class ProvidersOrderByWithRelationInput {
     updatedAt?: "asc" | "desc" | undefined;
     name?: "asc" | "desc" | undefined;
     nit?: "asc" | "desc" | undefined;
-    addredd?: "asc" | "desc" | undefined;
+    address?: "asc" | "desc" | undefined;
     agentProvider?: AgentProviderOrderByRelationAggregateInput | undefined;
 }

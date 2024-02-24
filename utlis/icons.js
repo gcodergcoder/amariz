@@ -4,7 +4,7 @@ export const edit_icons = (
     <svg
         width="20px"
         height="20px"
-        viewBox="0 0 24 24"
+        viewBox="0 0 30 30"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
     >
@@ -178,20 +178,20 @@ export const expand = (
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
     >
-        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
         <g
             id="SVGRepo_tracerCarrier"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeLinecap="round"
+            strokeLinejoin="round"
         ></g>
         <g id="SVGRepo_iconCarrier">
             {" "}
             <path
                 d="M21 14V16.2C21 17.8802 21 18.7202 20.673 19.362C20.3854 19.9265 19.9265 20.3854 19.362 20.673C18.7202 21 17.8802 21 16.2 21H14M10 3H7.8C6.11984 3 5.27976 3 4.63803 3.32698C4.07354 3.6146 3.6146 4.07354 3.32698 4.63803C3 5.27976 3 6.11984 3 7.8V10M15 9L21 3M21 3H15M21 3V9M9 15L3 21M3 21H9M3 21L3 15"
                 stroke="#000000"
-                stroke-width="0.8399999999999999"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="0.8399999999999999"
+                strokeLinecap="round"
+                strokeLinejoin="round"
             ></path>{" "}
         </g>
     </svg>
@@ -205,8 +205,8 @@ export const addUser = (
         stroke="currentColor"
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth="2"
-        viewBox="0 0 24 24"
+        strokeWidth="1"
+        viewBox="0 0 30 30"
         width="24"
         xmlns="http://www.w3.org/2000/svg"
     >
@@ -237,16 +237,12 @@ export const loadingIcon = (
 )
 
 
-export const arrow = (open) => {
-    return (
-        <>
+export const arrow = (
             <svg
-                className={`text-black w-6 h-7 z-40  ${
-                    open ? "rotate-180" : "rotate-0"
-                }`}
+
                 xmlns="http://www.w3.org/2000/svg"
-                width="10"
-                height="10"
+                width={zise}
+                height={zise}
                 fill="none"
                 viewBox="0 0 30 30"
                 stroke="currentColor"
@@ -254,10 +250,9 @@ export const arrow = (open) => {
                 <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    strokwidth="2"
+                    strokeWidth="2"
                     d="M19 9l-7 7-7-7"
                 />
             </svg>
-        </>
     );
-};
+

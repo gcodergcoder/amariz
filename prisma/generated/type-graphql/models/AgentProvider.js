@@ -6,10 +6,10 @@ const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
 let AgentProvider = exports.AgentProvider = class AgentProvider {
 };
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => TypeGraphQL.Int, {
+    TypeGraphQL.Field(_type => String, {
         nullable: false
     }),
-    tslib_1.__metadata("design:type", Number)
+    tslib_1.__metadata("design:type", String)
 ], AgentProvider.prototype, "id", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => Date, {
@@ -48,10 +48,10 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", String)
 ], AgentProvider.prototype, "phone", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => TypeGraphQL.Int, {
+    TypeGraphQL.Field(_type => String, {
         nullable: false
     }),
-    tslib_1.__metadata("design:type", Number)
+    tslib_1.__metadata("design:type", String)
 ], AgentProvider.prototype, "providerId", void 0);
 exports.AgentProvider = AgentProvider = tslib_1.__decorate([
     TypeGraphQL.ObjectType("AgentProvider", {})

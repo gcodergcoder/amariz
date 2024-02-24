@@ -4,6 +4,13 @@ import "@/styles/globals.css";
 import React from "react";
 import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
 import { Layouth } from "../layouth/layouth"
+import { Ubuntu } from 'next/font/google'
+
+const openSans = Ubuntu({
+    subsets: ['latin'],
+    display: 'swap',
+    weight: ["300", "400", "500", "700"]
+  })
 
 // local mode
 const client = new ApolloClient({
@@ -28,7 +35,7 @@ export default function App({
     pageProps: { session, ...pageProps },
 }) {
     return (
-        <main>
+        <main className={openSans.className}>
             <ApolloProvider client={client}>
                     <Layouth>
                         <Component {...pageProps} />

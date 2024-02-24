@@ -5,7 +5,6 @@ exports.AgentProviderScalarWhereWithAggregatesInput = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
 const DateTimeWithAggregatesFilter_1 = require("../inputs/DateTimeWithAggregatesFilter");
-const IntWithAggregatesFilter_1 = require("../inputs/IntWithAggregatesFilter");
 const StringWithAggregatesFilter_1 = require("../inputs/StringWithAggregatesFilter");
 let AgentProviderScalarWhereWithAggregatesInput = exports.AgentProviderScalarWhereWithAggregatesInput = AgentProviderScalarWhereWithAggregatesInput_1 = class AgentProviderScalarWhereWithAggregatesInput {
 };
@@ -28,10 +27,10 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", Array)
 ], AgentProviderScalarWhereWithAggregatesInput.prototype, "NOT", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => IntWithAggregatesFilter_1.IntWithAggregatesFilter, {
+    TypeGraphQL.Field(_type => StringWithAggregatesFilter_1.StringWithAggregatesFilter, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", IntWithAggregatesFilter_1.IntWithAggregatesFilter)
+    tslib_1.__metadata("design:type", StringWithAggregatesFilter_1.StringWithAggregatesFilter)
 ], AgentProviderScalarWhereWithAggregatesInput.prototype, "id", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => DateTimeWithAggregatesFilter_1.DateTimeWithAggregatesFilter, {
@@ -70,10 +69,10 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", StringWithAggregatesFilter_1.StringWithAggregatesFilter)
 ], AgentProviderScalarWhereWithAggregatesInput.prototype, "phone", void 0);
 tslib_1.__decorate([
-    TypeGraphQL.Field(_type => IntWithAggregatesFilter_1.IntWithAggregatesFilter, {
+    TypeGraphQL.Field(_type => StringWithAggregatesFilter_1.StringWithAggregatesFilter, {
         nullable: true
     }),
-    tslib_1.__metadata("design:type", IntWithAggregatesFilter_1.IntWithAggregatesFilter)
+    tslib_1.__metadata("design:type", StringWithAggregatesFilter_1.StringWithAggregatesFilter)
 ], AgentProviderScalarWhereWithAggregatesInput.prototype, "providerId", void 0);
 exports.AgentProviderScalarWhereWithAggregatesInput = AgentProviderScalarWhereWithAggregatesInput = AgentProviderScalarWhereWithAggregatesInput_1 = tslib_1.__decorate([
     TypeGraphQL.InputType("AgentProviderScalarWhereWithAggregatesInput", {})

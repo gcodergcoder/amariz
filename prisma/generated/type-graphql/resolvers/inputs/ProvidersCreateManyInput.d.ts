@@ -1,8 +1,8 @@
 export declare class ProvidersCreateManyInput {
-    id?: number | undefined;
+    id?: string | undefined;
     createdAt?: Date | undefined;
     updatedAt?: Date | undefined;
     name: string;
     nit: string;
-    addredd: string;
+    address: string;
 }

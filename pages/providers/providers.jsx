@@ -1,31 +1,29 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import { Inputs } from "../../components/Inputs";
-import useFormData from "../../hooks/useFormData";
+import { Inputs } from "@/components/Inputs";
+import useFormData from "@/hooks/useFormData";
 import { useMutation } from "@apollo/client";
-import useMutacionEffect from "../../hooks/useMutacionEffect";
+import useMutacionEffect from "@/hooks/useMutacionEffect";
 import { CREATE_PROVIDER, UPDATE_PROVIDER } from "@/graphql/providers/mutation";
 import Modal from "./Modal";
 
-const Provider = ({ setModalPvd, refetch, detail = null, cleanData }) => {
-    const [loadingG, setLoadingG] = useState(null);
+const Provider = ({ setModal, refetch, detail = undefined, cleanData }) => {
+    const [loadingG, setLoadingG] = useState(false);
     const { form, formData, updateFormData } = useFormData(null);
     const { mutationEffect } = useMutacionEffect(null);
     const [create, { data, error }] = useMutation(CREATE_PROVIDER);
     const [update, { data: dataUp, error: errorUp }] =
         useMutation(UPDATE_PROVIDER);
-    
-        console.log('detail :', detail);
 
     const submitForm = (e) => {
         e.preventDefault();
-        if (detail != null) {
+        if (Object.keys(detail).length != 0) {
             setLoadingG(true);
             update({
                 variables: {
                     data: {
-                        addredd: {
-                            set: formData.addredd,
+                        address: {
+                            set: formData.address,
                         },
                         name: {
                             set: formData.name,
@@ -46,20 +44,20 @@ const Provider = ({ setModalPvd, refetch, detail = null, cleanData }) => {
     };
 
     useEffect(() => {
-        if (detail != null) {
+        if (detail != undefined) {
             mutationEffect(dataUp, errorUp, refetch);
         } else {
             mutationEffect(data, error, refetch);
         }
         if (data || dataUp) {
-            setModalPvd(false);
+            setModal(false);
         }
     }, [data, error, dataUp, errorUp]);
 
     return (
         <form onSubmit={submitForm} onChange={updateFormData} ref={form}>
             <Modal
-                closeModal={setModalPvd}
+                closeModal={setModal}
                 title={"Provedores"}
                 loading={loadingG}
                 showCancelBtt={formData}
@@ -78,10 +76,10 @@ const Provider = ({ setModalPvd, refetch, detail = null, cleanData }) => {
                     defaultValue={detail?.nit}
                 />
                 <Inputs
-                    name="addredd"
+                    name="address"
                     label="Dirección"
                     required={true}
-                    defaultValue={detail?.addredd}
+                    defaultValue={detail?.address}
                 />
                 <br />
             </Modal>
@@ -90,8 +88,10 @@ const Provider = ({ setModalPvd, refetch, detail = null, cleanData }) => {
 };
 
 Provider.propTypes = {
-    setModalPvd: PropTypes.func,
+    setModal: PropTypes.func,
     refetch: PropTypes.func,
+    cleanData: PropTypes.func,
+    detail: PropTypes.object,
 };
 
 export default Provider;

@@ -3,7 +3,7 @@ import { DateTimeFilter } from "../inputs/DateTimeFilter";
 import { ProvidersWhereInput } from "../inputs/ProvidersWhereInput";
 import { StringFilter } from "../inputs/StringFilter";
 export declare class ProvidersWhereUniqueInput {
-    id?: number | undefined;
+    id?: string | undefined;
     AND?: ProvidersWhereInput[] | undefined;
     OR?: ProvidersWhereInput[] | undefined;
     NOT?: ProvidersWhereInput[] | undefined;
@@ -11,6 +11,6 @@ export declare class ProvidersWhereUniqueInput {
     updatedAt?: DateTimeFilter | undefined;
     name?: StringFilter | undefined;
     nit?: StringFilter | undefined;
-    addredd?: StringFilter | undefined;
+    address?: StringFilter | undefined;
     agentProvider?: AgentProviderListRelationFilter | undefined;
 }

@@ -1,6 +1,6 @@
 import { Providers } from "../models/Providers";
 export declare class AgentProvider {
-    id: number;
+    id: string;
     createdAt: Date;
     updatedAt: Date;
     name: string;
@@ -8,5 +8,5 @@ export declare class AgentProvider {
     email: string;
     phone: string;
     provider?: Providers;
-    providerId: number;
+    providerId: string;
 }

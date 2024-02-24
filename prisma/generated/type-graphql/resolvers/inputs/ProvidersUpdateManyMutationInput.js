@@ -8,6 +8,12 @@ const StringFieldUpdateOperationsInput_1 = require("../inputs/StringFieldUpdateO
 let ProvidersUpdateManyMutationInput = exports.ProvidersUpdateManyMutationInput = class ProvidersUpdateManyMutationInput {
 };
 tslib_1.__decorate([
+    TypeGraphQL.Field(_type => StringFieldUpdateOperationsInput_1.StringFieldUpdateOperationsInput, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", StringFieldUpdateOperationsInput_1.StringFieldUpdateOperationsInput)
+], ProvidersUpdateManyMutationInput.prototype, "id", void 0);
+tslib_1.__decorate([
     TypeGraphQL.Field(_type => DateTimeFieldUpdateOperationsInput_1.DateTimeFieldUpdateOperationsInput, {
         nullable: true
     }),
@@ -36,7 +42,7 @@ tslib_1.__decorate([
         nullable: true
     }),
     tslib_1.__metadata("design:type", StringFieldUpdateOperationsInput_1.StringFieldUpdateOperationsInput)
-], ProvidersUpdateManyMutationInput.prototype, "addredd", void 0);
+], ProvidersUpdateManyMutationInput.prototype, "address", void 0);
 exports.ProvidersUpdateManyMutationInput = ProvidersUpdateManyMutationInput = tslib_1.__decorate([
     TypeGraphQL.InputType("ProvidersUpdateManyMutationInput", {})
 ], ProvidersUpdateManyMutationInput);
