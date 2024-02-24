@@ -1,0 +1,35 @@
+import type { GraphQLResolveInfo } from "graphql";
+import { AggregateAgentProviderArgs } from "./args/AggregateAgentProviderArgs";
+import { CreateManyAgentProviderArgs } from "./args/CreateManyAgentProviderArgs";
+import { CreateOneAgentProviderArgs } from "./args/CreateOneAgentProviderArgs";
+import { DeleteManyAgentProviderArgs } from "./args/DeleteManyAgentProviderArgs";
+import { DeleteOneAgentProviderArgs } from "./args/DeleteOneAgentProviderArgs";
+import { FindFirstAgentProviderArgs } from "./args/FindFirstAgentProviderArgs";
+import { FindFirstAgentProviderOrThrowArgs } from "./args/FindFirstAgentProviderOrThrowArgs";
+import { FindManyAgentProviderArgs } from "./args/FindManyAgentProviderArgs";
+import { FindUniqueAgentProviderArgs } from "./args/FindUniqueAgentProviderArgs";
+import { FindUniqueAgentProviderOrThrowArgs } from "./args/FindUniqueAgentProviderOrThrowArgs";
+import { GroupByAgentProviderArgs } from "./args/GroupByAgentProviderArgs";
+import { UpdateManyAgentProviderArgs } from "./args/UpdateManyAgentProviderArgs";
+import { UpdateOneAgentProviderArgs } from "./args/UpdateOneAgentProviderArgs";
+import { UpsertOneAgentProviderArgs } from "./args/UpsertOneAgentProviderArgs";
+import { AgentProvider } from "../../../models/AgentProvider";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AgentProviderGroupBy } from "../../outputs/AgentProviderGroupBy";
+import { AggregateAgentProvider } from "../../outputs/AggregateAgentProvider";
+export declare class AgentProviderCrudResolver {
+    aggregateAgentProvider(ctx: any, info: GraphQLResolveInfo, args: AggregateAgentProviderArgs): Promise<AggregateAgentProvider>;
+    createManyAgentProvider(ctx: any, info: GraphQLResolveInfo, args: CreateManyAgentProviderArgs): Promise<AffectedRowsOutput>;
+    createOneAgentProvider(ctx: any, info: GraphQLResolveInfo, args: CreateOneAgentProviderArgs): Promise<AgentProvider>;
+    deleteManyAgentProvider(ctx: any, info: GraphQLResolveInfo, args: DeleteManyAgentProviderArgs): Promise<AffectedRowsOutput>;
+    deleteOneAgentProvider(ctx: any, info: GraphQLResolveInfo, args: DeleteOneAgentProviderArgs): Promise<AgentProvider | null>;
+    findFirstAgentProvider(ctx: any, info: GraphQLResolveInfo, args: FindFirstAgentProviderArgs): Promise<AgentProvider | null>;
+    findFirstAgentProviderOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindFirstAgentProviderOrThrowArgs): Promise<AgentProvider | null>;
+    agentProviders(ctx: any, info: GraphQLResolveInfo, args: FindManyAgentProviderArgs): Promise<AgentProvider[]>;
+    agentProvider(ctx: any, info: GraphQLResolveInfo, args: FindUniqueAgentProviderArgs): Promise<AgentProvider | null>;
+    getAgentProvider(ctx: any, info: GraphQLResolveInfo, args: FindUniqueAgentProviderOrThrowArgs): Promise<AgentProvider | null>;
+    groupByAgentProvider(ctx: any, info: GraphQLResolveInfo, args: GroupByAgentProviderArgs): Promise<AgentProviderGroupBy[]>;
+    updateManyAgentProvider(ctx: any, info: GraphQLResolveInfo, args: UpdateManyAgentProviderArgs): Promise<AffectedRowsOutput>;
+    updateOneAgentProvider(ctx: any, info: GraphQLResolveInfo, args: UpdateOneAgentProviderArgs): Promise<AgentProvider | null>;
+    upsertOneAgentProvider(ctx: any, info: GraphQLResolveInfo, args: UpsertOneAgentProviderArgs): Promise<AgentProvider>;
+}
