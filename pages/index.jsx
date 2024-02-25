@@ -1,9 +1,10 @@
 import React from "react";
+import Link from "next/link";
 
 export default function Home() {
     return (
         <>
-            <title>amariz</title>
+            <title>Amariz Agency | SYS</title>
             <meta
                 name="description"
                 content="Trámites y reprogramación de citas"
@@ -14,7 +15,12 @@ export default function Home() {
             />
             <link rel="icon" href="/favicon.ico" />
 
-            <main>hola</main>
+            <main className="flex items-center justify-center h-screen">
+
+                    <Link href={"/providers"}>
+                        <span className="underline ">provedores</span>
+                    </Link>
+            </main>
         </>
     );
 }
