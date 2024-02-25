@@ -13,10 +13,10 @@ const openSans = Ubuntu({
   })
 
 // local mode
-const client = new ApolloClient({
-    uri: "http://localhost:3000/api/graphql",
-    cache: new InMemoryCache(),
-});
+// const client = new ApolloClient({
+//     uri: "http://localhost:3000/api/graphql",
+//     cache: new InMemoryCache(),
+// });
 
 // dev mode
 // const client = new ApolloClient({
@@ -25,10 +25,10 @@ const client = new ApolloClient({
 // });
 
 // production mode
-// const client = new ApolloClient({
-//     uri: "https://pronto-col.vercel.app/api/graphql",
-//     cache: new InMemoryCache(),
-// });
+const client = new ApolloClient({
+    uri: "https://amariz.vercel.app/api/graphql",
+    cache: new InMemoryCache(),
+});
 
 export default function App({
     Component,
