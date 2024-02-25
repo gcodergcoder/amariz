@@ -1,8 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { ButtonLoading } from "../../components/ButtonLoading";
+import { isEmpty } from "class-validator";
 
 const Modal = ({children, title, loading, closeModal, showCancelBtt, cleanData}) => {
+
     const closeModalF = () =>{
         cleanData({})
         closeModal(false)
@@ -28,13 +30,15 @@ const Modal = ({children, title, loading, closeModal, showCancelBtt, cleanData})
                         {children}
                     </div>
                     <div className="flex space-x-2 justify-end py-4 px-8 border-t border-gray-200 rounded-lg">
-                        { Object.keys(showCancelBtt).length  != 0 ?  <ButtonLoading
+                        {JSON.stringify(showCancelBtt) == "{}" ? <></>  :
+                        <ButtonLoading
                             name="Guardar"
                             loading={loading}
                             type="submit"
                         >
                             Guardar
-                        </ButtonLoading>  : <></> }
+                        </ButtonLoading>
+                    }
                         <button
                             onClick={()=>{closeModalF()}}
                             type="button"

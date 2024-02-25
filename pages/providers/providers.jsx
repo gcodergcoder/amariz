@@ -7,9 +7,9 @@ import useMutacionEffect from "@/hooks/useMutacionEffect";
 import { CREATE_PROVIDER, UPDATE_PROVIDER } from "@/graphql/providers/mutation";
 import Modal from "./Modal";
 
-const Provider = ({ setModal, refetch, detail = undefined, cleanData }) => {
+const Provider = ({ setModal, refetch, detail = {}, cleanData }) => {
     const [loadingG, setLoadingG] = useState(false);
-    const { form, formData, updateFormData } = useFormData(null);
+    const { form, formData, updateFormData } = useFormData({});
     const { mutationEffect } = useMutacionEffect(null);
     const [create, { data, error }] = useMutation(CREATE_PROVIDER);
     const [update, { data: dataUp, error: errorUp }] =
@@ -44,7 +44,7 @@ const Provider = ({ setModal, refetch, detail = undefined, cleanData }) => {
     };
 
     useEffect(() => {
-        if (detail != undefined) {
+        if (Object.keys(detail).length != 0) {
             mutationEffect(dataUp, errorUp, refetch);
         } else {
             mutationEffect(data, error, refetch);

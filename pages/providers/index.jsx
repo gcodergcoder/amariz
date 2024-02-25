@@ -10,9 +10,10 @@ import AgentProvider from "./agentProvider";
 // const NoSSR = dynamic(() => import("./Modal"), { ssr: false });
 const TableReact = () => {
     const { data, error, refetch } = useQuery(LIST_PROVIDER);
-    const [dataProvider, setDataProvider] = useState(undefined);
-    const [datailProvider, setDetailProvider] = useState(undefined);
-    const [datailAgtPvd, setDetailAgtPvd] = useState(undefined);
+    console.log('data :', data);
+    const [dataProvider, setDataProvider] = useState([]);
+    const [datailProvider, setDetailProvider] = useState({});
+    const [datailAgtPvd, setDetailAgtPvd] = useState({});
     const [modalPvd, setModalPvd] = useState(false);
     const [modalAgtPvd, setModalAgtPvd] = useState(false);
 

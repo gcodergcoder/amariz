@@ -7,8 +7,8 @@ import useMutacionEffect from "@/hooks/useMutacionEffect";
 import { CREATE_AGENT, UPDATE_AGENT } from "@/graphql/providers/mutation";
 import Modal from "./Modal";
 
-const AgentProvider = ({ setModal, refetch, detail = undefined, cleanData }) => {
-    const { form, formData, updateFormData } = useFormData(null);
+const AgentProvider = ({ setModal, refetch, detail = {}, cleanData }) => {
+    const { form, formData, updateFormData } = useFormData({});
     const [loadingG, setLoadingG] = useState(false);
     const [create, { data, error }] = useMutation(CREATE_AGENT);
     const [update, { data: dataUp, error: errorUp }] =
