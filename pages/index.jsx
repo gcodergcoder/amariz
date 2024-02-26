@@ -23,7 +23,7 @@ export default function Home() {
                         </Link>
                     </li>
                     <li>
-                        <Link href={"/qoutes"}>
+                        <Link href={"/quotes"}>
                             <span className="underline ">cotizaciones</span>
                         </Link>
                     </li>
