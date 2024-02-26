@@ -6,6 +6,7 @@ const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
 const AgentProviderListRelationFilter_1 = require("../inputs/AgentProviderListRelationFilter");
 const DateTimeFilter_1 = require("../inputs/DateTimeFilter");
+const QoutesListRelationFilter_1 = require("../inputs/QoutesListRelationFilter");
 const StringFilter_1 = require("../inputs/StringFilter");
 let ProvidersWhereInput = exports.ProvidersWhereInput = ProvidersWhereInput_1 = class ProvidersWhereInput {
 };
@@ -69,6 +70,12 @@ tslib_1.__decorate([
     }),
     tslib_1.__metadata("design:type", AgentProviderListRelationFilter_1.AgentProviderListRelationFilter)
 ], ProvidersWhereInput.prototype, "agentProvider", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => QoutesListRelationFilter_1.QoutesListRelationFilter, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", QoutesListRelationFilter_1.QoutesListRelationFilter)
+], ProvidersWhereInput.prototype, "quotes", void 0);
 exports.ProvidersWhereInput = ProvidersWhereInput = ProvidersWhereInput_1 = tslib_1.__decorate([
     TypeGraphQL.InputType("ProvidersWhereInput", {})
 ], ProvidersWhereInput);

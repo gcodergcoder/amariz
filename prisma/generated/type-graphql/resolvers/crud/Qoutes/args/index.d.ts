@@ -1,0 +1,14 @@
+export { AggregateQoutesArgs } from "./AggregateQoutesArgs";
+export { CreateManyQoutesArgs } from "./CreateManyQoutesArgs";
+export { CreateOneQoutesArgs } from "./CreateOneQoutesArgs";
+export { DeleteManyQoutesArgs } from "./DeleteManyQoutesArgs";
+export { DeleteOneQoutesArgs } from "./DeleteOneQoutesArgs";
+export { FindFirstQoutesArgs } from "./FindFirstQoutesArgs";
+export { FindFirstQoutesOrThrowArgs } from "./FindFirstQoutesOrThrowArgs";
+export { FindManyQoutesArgs } from "./FindManyQoutesArgs";
+export { FindUniqueQoutesArgs } from "./FindUniqueQoutesArgs";
+export { FindUniqueQoutesOrThrowArgs } from "./FindUniqueQoutesOrThrowArgs";
+export { GroupByQoutesArgs } from "./GroupByQoutesArgs";
+export { UpdateManyQoutesArgs } from "./UpdateManyQoutesArgs";
+export { UpdateOneQoutesArgs } from "./UpdateOneQoutesArgs";
+export { UpsertOneQoutesArgs } from "./UpsertOneQoutesArgs";

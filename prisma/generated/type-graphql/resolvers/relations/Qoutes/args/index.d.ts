@@ -1,0 +1,1 @@
+export { QoutesQoutesDetailsArgs } from "./QoutesQoutesDetailsArgs";

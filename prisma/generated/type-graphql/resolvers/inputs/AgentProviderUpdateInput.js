@@ -5,6 +5,7 @@ const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
 const DateTimeFieldUpdateOperationsInput_1 = require("../inputs/DateTimeFieldUpdateOperationsInput");
 const ProvidersUpdateOneRequiredWithoutAgentProviderNestedInput_1 = require("../inputs/ProvidersUpdateOneRequiredWithoutAgentProviderNestedInput");
+const QoutesUpdateManyWithoutAgentProviderNestedInput_1 = require("../inputs/QoutesUpdateManyWithoutAgentProviderNestedInput");
 const StringFieldUpdateOperationsInput_1 = require("../inputs/StringFieldUpdateOperationsInput");
 let AgentProviderUpdateInput = exports.AgentProviderUpdateInput = class AgentProviderUpdateInput {
 };
@@ -56,6 +57,12 @@ tslib_1.__decorate([
     }),
     tslib_1.__metadata("design:type", ProvidersUpdateOneRequiredWithoutAgentProviderNestedInput_1.ProvidersUpdateOneRequiredWithoutAgentProviderNestedInput)
 ], AgentProviderUpdateInput.prototype, "provider", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => QoutesUpdateManyWithoutAgentProviderNestedInput_1.QoutesUpdateManyWithoutAgentProviderNestedInput, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", QoutesUpdateManyWithoutAgentProviderNestedInput_1.QoutesUpdateManyWithoutAgentProviderNestedInput)
+], AgentProviderUpdateInput.prototype, "qoutes", void 0);
 exports.AgentProviderUpdateInput = AgentProviderUpdateInput = tslib_1.__decorate([
     TypeGraphQL.InputType("AgentProviderUpdateInput", {})
 ], AgentProviderUpdateInput);

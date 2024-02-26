@@ -1,5 +1,6 @@
 import { DateTimeFilter } from "../inputs/DateTimeFilter";
 import { ProvidersRelationFilter } from "../inputs/ProvidersRelationFilter";
+import { QoutesListRelationFilter } from "../inputs/QoutesListRelationFilter";
 import { StringFilter } from "../inputs/StringFilter";
 export declare class AgentProviderWhereInput {
     AND?: AgentProviderWhereInput[] | undefined;
@@ -14,4 +15,5 @@ export declare class AgentProviderWhereInput {
     phone?: StringFilter | undefined;
     providerId?: StringFilter | undefined;
     provider?: ProvidersRelationFilter | undefined;
+    qoutes?: QoutesListRelationFilter | undefined;
 }

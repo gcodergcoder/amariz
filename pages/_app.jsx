@@ -4,9 +4,9 @@ import "@/styles/globals.css";
 import React from "react";
 import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
 import { Layouth } from "../layouth/layouth"
-import { Ubuntu } from 'next/font/google'
+import { Poppins } from 'next/font/google'
 
-const openSans = Ubuntu({
+const openSans = Poppins({
     subsets: ['latin'],
     display: 'swap',
     weight: ["300", "400", "500", "700"]
@@ -14,7 +14,7 @@ const openSans = Ubuntu({
 
 // local mode
 const client = new ApolloClient({
-    uri: "http://localhost:3000/api/graphql",
+    uri: "http://192.168.1.4:3000/api/graphql",
     cache: new InMemoryCache(),
 });
 

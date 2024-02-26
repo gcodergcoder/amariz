@@ -1,0 +1,35 @@
+import type { GraphQLResolveInfo } from "graphql";
+import { AggregateQoutesDetailsArgs } from "./args/AggregateQoutesDetailsArgs";
+import { CreateManyQoutesDetailsArgs } from "./args/CreateManyQoutesDetailsArgs";
+import { CreateOneQoutesDetailsArgs } from "./args/CreateOneQoutesDetailsArgs";
+import { DeleteManyQoutesDetailsArgs } from "./args/DeleteManyQoutesDetailsArgs";
+import { DeleteOneQoutesDetailsArgs } from "./args/DeleteOneQoutesDetailsArgs";
+import { FindFirstQoutesDetailsArgs } from "./args/FindFirstQoutesDetailsArgs";
+import { FindFirstQoutesDetailsOrThrowArgs } from "./args/FindFirstQoutesDetailsOrThrowArgs";
+import { FindManyQoutesDetailsArgs } from "./args/FindManyQoutesDetailsArgs";
+import { FindUniqueQoutesDetailsArgs } from "./args/FindUniqueQoutesDetailsArgs";
+import { FindUniqueQoutesDetailsOrThrowArgs } from "./args/FindUniqueQoutesDetailsOrThrowArgs";
+import { GroupByQoutesDetailsArgs } from "./args/GroupByQoutesDetailsArgs";
+import { UpdateManyQoutesDetailsArgs } from "./args/UpdateManyQoutesDetailsArgs";
+import { UpdateOneQoutesDetailsArgs } from "./args/UpdateOneQoutesDetailsArgs";
+import { UpsertOneQoutesDetailsArgs } from "./args/UpsertOneQoutesDetailsArgs";
+import { QoutesDetails } from "../../../models/QoutesDetails";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateQoutesDetails } from "../../outputs/AggregateQoutesDetails";
+import { QoutesDetailsGroupBy } from "../../outputs/QoutesDetailsGroupBy";
+export declare class QoutesDetailsCrudResolver {
+    aggregateQoutesDetails(ctx: any, info: GraphQLResolveInfo, args: AggregateQoutesDetailsArgs): Promise<AggregateQoutesDetails>;
+    createManyQoutesDetails(ctx: any, info: GraphQLResolveInfo, args: CreateManyQoutesDetailsArgs): Promise<AffectedRowsOutput>;
+    createOneQoutesDetails(ctx: any, info: GraphQLResolveInfo, args: CreateOneQoutesDetailsArgs): Promise<QoutesDetails>;
+    deleteManyQoutesDetails(ctx: any, info: GraphQLResolveInfo, args: DeleteManyQoutesDetailsArgs): Promise<AffectedRowsOutput>;
+    deleteOneQoutesDetails(ctx: any, info: GraphQLResolveInfo, args: DeleteOneQoutesDetailsArgs): Promise<QoutesDetails | null>;
+    findFirstQoutesDetails(ctx: any, info: GraphQLResolveInfo, args: FindFirstQoutesDetailsArgs): Promise<QoutesDetails | null>;
+    findFirstQoutesDetailsOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindFirstQoutesDetailsOrThrowArgs): Promise<QoutesDetails | null>;
+    findManyQoutesDetails(ctx: any, info: GraphQLResolveInfo, args: FindManyQoutesDetailsArgs): Promise<QoutesDetails[]>;
+    findUniqueQoutesDetails(ctx: any, info: GraphQLResolveInfo, args: FindUniqueQoutesDetailsArgs): Promise<QoutesDetails | null>;
+    findUniqueQoutesDetailsOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindUniqueQoutesDetailsOrThrowArgs): Promise<QoutesDetails | null>;
+    groupByQoutesDetails(ctx: any, info: GraphQLResolveInfo, args: GroupByQoutesDetailsArgs): Promise<QoutesDetailsGroupBy[]>;
+    updateManyQoutesDetails(ctx: any, info: GraphQLResolveInfo, args: UpdateManyQoutesDetailsArgs): Promise<AffectedRowsOutput>;
+    updateOneQoutesDetails(ctx: any, info: GraphQLResolveInfo, args: UpdateOneQoutesDetailsArgs): Promise<QoutesDetails | null>;
+    upsertOneQoutesDetails(ctx: any, info: GraphQLResolveInfo, args: UpsertOneQoutesDetailsArgs): Promise<QoutesDetails>;
+}

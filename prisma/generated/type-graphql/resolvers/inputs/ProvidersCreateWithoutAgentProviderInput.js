@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.ProvidersCreateWithoutAgentProviderInput = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
+const QoutesCreateNestedManyWithoutProviderInput_1 = require("../inputs/QoutesCreateNestedManyWithoutProviderInput");
 let ProvidersCreateWithoutAgentProviderInput = exports.ProvidersCreateWithoutAgentProviderInput = class ProvidersCreateWithoutAgentProviderInput {
 };
 tslib_1.__decorate([
@@ -41,6 +42,12 @@ tslib_1.__decorate([
     }),
     tslib_1.__metadata("design:type", String)
 ], ProvidersCreateWithoutAgentProviderInput.prototype, "address", void 0);
+tslib_1.__decorate([
+    TypeGraphQL.Field(_type => QoutesCreateNestedManyWithoutProviderInput_1.QoutesCreateNestedManyWithoutProviderInput, {
+        nullable: true
+    }),
+    tslib_1.__metadata("design:type", QoutesCreateNestedManyWithoutProviderInput_1.QoutesCreateNestedManyWithoutProviderInput)
+], ProvidersCreateWithoutAgentProviderInput.prototype, "quotes", void 0);
 exports.ProvidersCreateWithoutAgentProviderInput = ProvidersCreateWithoutAgentProviderInput = tslib_1.__decorate([
     TypeGraphQL.InputType("ProvidersCreateWithoutAgentProviderInput", {})
 ], ProvidersCreateWithoutAgentProviderInput);

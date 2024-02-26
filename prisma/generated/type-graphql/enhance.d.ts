@@ -8,6 +8,8 @@ export type MethodDecoratorOverrideFn = (decorators: MethodDecorator[]) => Metho
 declare const crudResolversMap: {
     Providers: typeof crudResolvers.ProvidersCrudResolver;
     AgentProvider: typeof crudResolvers.AgentProviderCrudResolver;
+    Qoutes: typeof crudResolvers.QoutesCrudResolver;
+    QoutesDetails: typeof crudResolvers.QoutesDetailsCrudResolver;
 };
 type ResolverModelNames = keyof typeof crudResolversMap;
 type ModelResolverActionNames<TModel extends ResolverModelNames> = keyof typeof crudResolversMap[TModel]["prototype"];
@@ -34,6 +36,8 @@ export declare function applyArgsTypesEnhanceMap(argsTypesEnhanceMap: ArgsTypesE
 declare const relationResolversMap: {
     Providers: typeof relationResolvers.ProvidersRelationsResolver;
     AgentProvider: typeof relationResolvers.AgentProviderRelationsResolver;
+    Qoutes: typeof relationResolvers.QoutesRelationsResolver;
+    QoutesDetails: typeof relationResolvers.QoutesDetailsRelationsResolver;
 };
 type RelationResolverModelNames = keyof typeof relationResolversMap;
 type RelationResolverActionNames<TModel extends RelationResolverModelNames> = keyof typeof relationResolversMap[TModel]["prototype"];

@@ -1,3 +1,4 @@
+import { QoutesCreateNestedManyWithoutAgentProviderInput } from "../inputs/QoutesCreateNestedManyWithoutAgentProviderInput";
 export declare class AgentProviderCreateWithoutProviderInput {
     id?: string | undefined;
     createdAt?: Date | undefined;
@@ -6,4 +7,5 @@ export declare class AgentProviderCreateWithoutProviderInput {
     surName: string;
     email: string;
     phone: string;
+    qoutes?: QoutesCreateNestedManyWithoutAgentProviderInput | undefined;
 }
