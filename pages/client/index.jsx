@@ -6,6 +6,8 @@ import { useQuery } from "@apollo/client";
 import { LIST_PROVIDER } from "@/graphql/client/query";
 import Client from "./client";
 import AgentProvider from "./agentProvider";
+import SideBar from "../../components/SideBar";
+import HeaderImagen from "../../components/HeaderImagen";
 
 // const NoSSR = dynamic(() => import("./Modal"), { ssr: false });
 const TableReact = () => {
@@ -59,8 +61,11 @@ const TableReact = () => {
             ) : (
                 <></>
             )}
-            <div className="bg-white flex flex-col items-center justify-center py-10 text-lg">
-                <div className="w-full max-w-4xl px-2">
+        <div className="flex p-2 text-sm">
+            <SideBar />
+            <div className="flex-col w-full justify-start md:w-10/12 md:px-4">
+                <HeaderImagen/>
+                <div className="w-full px-2">
                     <h1 className="font-medium mb-4 text-center py-6 text-3xl">
                         Clientes
                     </h1>
@@ -108,6 +113,7 @@ const TableReact = () => {
                         </table>
                     </div>
                 </div>
+            </div>
             </div>
         </>
     );

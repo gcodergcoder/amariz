@@ -13,16 +13,16 @@ const openSans = Poppins({
   })
 
 // local mode
-// const client = new ApolloClient({
-//     uri: "http://192.168.1.4:3000/api/graphql",
-//     cache: new InMemoryCache(),
-// });
-
-// dev mode
 const client = new ApolloClient({
-    uri: "https://amariz-git-dev-gcoder-solutions-projects.vercel.app/api/graphql",
+    uri: "http://localhost:3000/api/graphql",
     cache: new InMemoryCache(),
 });
+
+// dev mode
+// const client = new ApolloClient({
+//     uri: "https://amariz-git-dev-gcoder-solutions-projects.vercel.app/api/graphql",
+//     cache: new InMemoryCache(),
+// });
 
 // production mode
 // const client = new ApolloClient({
