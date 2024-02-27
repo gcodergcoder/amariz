@@ -160,7 +160,7 @@ const Index = () => {
                 </thead>
                 <tbody>
                     {data?.findUniqueQoutes?.qoutesDetails?.map((obj) => {
-                        return <TrBody key={obj.id} detail={obj} parcePrice={parcePrice} />;
+                        return <TrBody key={obj.description} detail={obj} parcePrice={parcePrice} />;
                     })}
                     {suma.map((item) => {
                         return <SumatoryTr key={item.id} item={item} parcePrice={parcePrice} />;

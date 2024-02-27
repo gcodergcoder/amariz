@@ -58,7 +58,7 @@ const Select = () => {
                 <label className="sr-only">Choose a state</label>
                 <select className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-e-lg border-s-gray-100 border-s-2 focus:outline-0 block w-full p-2.5">
                     {dataAgent[0]?.agentProvider?.map((agent)=>{
-                        return <option selected>{agent.name + " " + agent.surName}</option>
+                        return <option key={agent.id} selected>{agent.name + " " + agent.surName}</option>
                     })}
                 </select>
             </div>

@@ -60,9 +60,10 @@ const Index = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            {data?.findManyQoutes?.map((ob) => (
-                                <TrBody key={ob?.id} data={ob} />
-                            ))}
+                            {data?.findManyQoutes?.map((ob) => {
+                                {console.log('ob2 :', on);}
+                                return <TrBody key={ob?.id} data={ob} />
+                            })}
                         </tbody>
                     </table>
                     <div className="text-end">Hacer paginas</div>
