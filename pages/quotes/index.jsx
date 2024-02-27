@@ -61,7 +61,6 @@ const Index = () => {
                         </thead>
                         <tbody>
                             {data?.findManyQoutes?.map((ob) => {
-                                {console.log('ob2 :', on);}
                                 return <TrBody key={ob?.id} data={ob} />
                             })}
                         </tbody>

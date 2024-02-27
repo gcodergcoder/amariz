@@ -22,8 +22,6 @@ const useParsePrice = () => {
                 result = result + ".";
             }
         }
-        console.log(reverseString(result));
-        console.log(numero_decimal[1]);
         return "$"+reverseString(result)+","+numero_decimal[1].slice(0,2)
         
     };
