@@ -114,7 +114,7 @@ const TrBody = ({ data }) => {
             <td className={`${css_td} md:w-5/24`}>
                 <span className={`${css_span} rounded-bl-xl`}>Opciones</span>
                 <Link
-                    href={`quotes/qt/${"clt3bcm5u00002nqpuhg3w9xu"}`}
+                    href={`quotes/qt/${data?.id}`}
                     className={`${css_span_2}`}
                 >
                     ver

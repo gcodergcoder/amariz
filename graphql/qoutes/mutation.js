@@ -9,7 +9,7 @@ const CREATE_QOUTES = gql`
 `;
 
 const UPDATE_QOUTES = gql`
-    mutation UpdateOneQoutes(
+    mutation Mutation(
         $data: QoutesUpdateInput!
         $where: QoutesWhereUniqueInput!
     ) {
@@ -28,14 +28,14 @@ const CREATE_QDETAIL = gql`
 `;
 
 const UPDATE_QDETAIL = gql`
-    mutation UpdateOneQoutes(
-        $data: QoutesUpdateInput!
-        $where: QoutesWhereUniqueInput!
+    mutation UpdateOneQoutesDetails(
+        $data: QoutesDetailsUpdateInput!
+        $where: QoutesDetailsWhereUniqueInput!
     ) {
-        updateOneQoutes(data: $data, where: $where) {
+        updateOneQoutesDetails(data: $data, where: $where) {
             id
         }
     }
 `;
 
-export { CREATE_QOUTES, UPDATE_QOUTES, CREATE_QDETAIL };
+export { CREATE_QOUTES, UPDATE_QOUTES, CREATE_QDETAIL, UPDATE_QDETAIL };

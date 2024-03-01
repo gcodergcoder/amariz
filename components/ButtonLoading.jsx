@@ -6,10 +6,10 @@ const ButtonLoading = ({ type, name, loading, loadinName= "Guardando...", bg="bg
     //loading => usar este estado para mostrar icono de espera
     return (
             <button
-                className={`flex mr-0.5 px-5 py-2 items-center justify-center text-white rounded-lg font-bold text-sm ${bg}`}
+                className={`flex mr-0.5 px-2 mx-2 items-center justify-center text-white rounded-lg font-bold text-sm ${bg}`}
                 type={type}
             >
-                <div className="flex">
+                <div className="flex p-1 ">
                     {loading ? loadingIcon : (
                         <></>
                     )}

@@ -37,6 +37,7 @@ const QOUTE_BY_ID = gql`
       address
     }
     qoutesDetails {
+      id
       description
       price
       unit

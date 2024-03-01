@@ -1,11 +1,11 @@
 import React from "react";
 
-const ButtonGeneral = ({ name, setValue, value, color = "bg-amariz_6", text_color = "text-white" } ) => {
+const ButtonGeneral = ({ name, setValue, value, color = "bg-gray-400", text_color = "text-white" } ) => {
     return (
-        <div className="flex justify-center mx-1">
+        <div className={`flex px-3 mx-1 items-center justify-center text-white rounded-lg font-bold text-sm ${color} ${text_color}`}>
             <button
                 onClick={() => setValue(value)}
-                className={`flex mx-0.5 items-center font-semibold transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 rounded-xl px-4 ml-2 ${color} ${text_color}`}
+                className={`flex items-center font-semibold py-1 ${color} ${text_color}`}
             >
                 {name}
             </button>

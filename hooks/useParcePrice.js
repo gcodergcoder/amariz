@@ -22,8 +22,11 @@ const useParsePrice = () => {
                 result = result + ".";
             }
         }
-        return "$"+reverseString(result)+","+numero_decimal[1].slice(0,2)
-        
+        if(numero_decimal.length == 1){
+            return "$"+reverseString(result)
+        }else{
+            return "$"+reverseString(result)+","+numero_decimal[1].slice(0,2)
+        }
     };
     return { parcePrice };
 };
