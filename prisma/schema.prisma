@@ -21,6 +21,7 @@ model Providers {
   nit           String
   address       String
   agentProvider AgentProvider[]
+  quotes        Qoutes[]
 }
 
 model AgentProvider {
@@ -33,4 +34,28 @@ model AgentProvider {
   phone      String
   provider   Providers @relation(fields: [providerId], references: [id])
   providerId String
+  qoutes Qoutes[]
 }
+
+model Qoutes {
+  id            String          @id @default(cuid())
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime        @updatedAt
+  provider   Providers @relation(fields: [providerId], references: [id])
+  providerId String
+  agentProvider   AgentProvider @relation(fields: [agentProviderId], references: [id])
+  agentProviderId String
+  qoutesDetails QoutesDetails[]
+}
+
+model QoutesDetails {
+  id            String          @id @default(cuid())
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime        @updatedAt
+  description String
+  unit Int
+  price Float
+  qoutes        Qoutes @relation(fields: [quotesId], references: [id])
+  quotesId      String
+}
+

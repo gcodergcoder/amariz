@@ -4,15 +4,15 @@ import "@/styles/globals.css";
 import React from "react";
 import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
 import { Layouth } from "../layouth/layouth"
-import { Ubuntu } from 'next/font/google'
+import { Poppins } from 'next/font/google'
 
-const openSans = Ubuntu({
+const openSans = Poppins({
     subsets: ['latin'],
     display: 'swap',
     weight: ["300", "400", "500", "700"]
   })
 
-// local mode
+// dev mode
 // const client = new ApolloClient({
 //     uri: "http://localhost:3000/api/graphql",
 //     cache: new InMemoryCache(),
@@ -20,7 +20,7 @@ const openSans = Ubuntu({
 
 // dev mode
 // const client = new ApolloClient({
-//     uri: "https://pronto-git-dev-gustavodearmas-s-team.vercel.app/api/graphql",
+//     uri: "https://amariz-git-dev-gcoder-solutions-projects.vercel.app/api/graphql",
 //     cache: new InMemoryCache(),
 // });
 

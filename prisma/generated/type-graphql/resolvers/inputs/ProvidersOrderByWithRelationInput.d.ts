@@ -1,4 +1,5 @@
 import { AgentProviderOrderByRelationAggregateInput } from "../inputs/AgentProviderOrderByRelationAggregateInput";
+import { QoutesOrderByRelationAggregateInput } from "../inputs/QoutesOrderByRelationAggregateInput";
 export declare class ProvidersOrderByWithRelationInput {
     id?: "asc" | "desc" | undefined;
     createdAt?: "asc" | "desc" | undefined;
@@ -7,4 +8,5 @@ export declare class ProvidersOrderByWithRelationInput {
     nit?: "asc" | "desc" | undefined;
     address?: "asc" | "desc" | undefined;
     agentProvider?: AgentProviderOrderByRelationAggregateInput | undefined;
+    quotes?: QoutesOrderByRelationAggregateInput | undefined;
 }

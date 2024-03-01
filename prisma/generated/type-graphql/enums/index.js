@@ -1,10 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.TransactionIsolationLevel = exports.SortOrder = exports.QueryMode = exports.ProvidersScalarFieldEnum = exports.AgentProviderScalarFieldEnum = void 0;
+exports.TransactionIsolationLevel = exports.SortOrder = exports.QueryMode = exports.QoutesScalarFieldEnum = exports.QoutesDetailsScalarFieldEnum = exports.ProvidersScalarFieldEnum = exports.AgentProviderScalarFieldEnum = void 0;
 var AgentProviderScalarFieldEnum_1 = require("./AgentProviderScalarFieldEnum");
 Object.defineProperty(exports, "AgentProviderScalarFieldEnum", { enumerable: true, get: function () { return AgentProviderScalarFieldEnum_1.AgentProviderScalarFieldEnum; } });
 var ProvidersScalarFieldEnum_1 = require("./ProvidersScalarFieldEnum");
 Object.defineProperty(exports, "ProvidersScalarFieldEnum", { enumerable: true, get: function () { return ProvidersScalarFieldEnum_1.ProvidersScalarFieldEnum; } });
+var QoutesDetailsScalarFieldEnum_1 = require("./QoutesDetailsScalarFieldEnum");
+Object.defineProperty(exports, "QoutesDetailsScalarFieldEnum", { enumerable: true, get: function () { return QoutesDetailsScalarFieldEnum_1.QoutesDetailsScalarFieldEnum; } });
+var QoutesScalarFieldEnum_1 = require("./QoutesScalarFieldEnum");
+Object.defineProperty(exports, "QoutesScalarFieldEnum", { enumerable: true, get: function () { return QoutesScalarFieldEnum_1.QoutesScalarFieldEnum; } });
 var QueryMode_1 = require("./QueryMode");
 Object.defineProperty(exports, "QueryMode", { enumerable: true, get: function () { return QueryMode_1.QueryMode; } });
 var SortOrder_1 = require("./SortOrder");

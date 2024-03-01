@@ -1,4 +1,5 @@
 import { ProvidersCreateNestedOneWithoutAgentProviderInput } from "../inputs/ProvidersCreateNestedOneWithoutAgentProviderInput";
+import { QoutesCreateNestedManyWithoutAgentProviderInput } from "../inputs/QoutesCreateNestedManyWithoutAgentProviderInput";
 export declare class AgentProviderCreateInput {
     id?: string | undefined;
     createdAt?: Date | undefined;
@@ -8,4 +9,5 @@ export declare class AgentProviderCreateInput {
     email: string;
     phone: string;
     provider: ProvidersCreateNestedOneWithoutAgentProviderInput;
+    qoutes?: QoutesCreateNestedManyWithoutAgentProviderInput | undefined;
 }

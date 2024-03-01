@@ -1,22 +1,77 @@
 const zise = "20px";
-const color = "";
-export const edit_icons = (
-    <svg
-        width="20px"
-        height="20px"
-        viewBox="0 0 30 30"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-    >
-        <path
-            d="M18.9445 9.1875L14.9445 5.1875M18.9445 9.1875L13.946 14.1859C13.2873 14.8446 12.4878 15.3646 11.5699 15.5229C10.6431 15.6828 9.49294 15.736 8.94444 15.1875C8.39595 14.639 8.44915 13.4888 8.609 12.562C8.76731 11.6441 9.28735 10.8446 9.946 10.1859L14.9445 5.1875M18.9445 9.1875C18.9445 9.1875 21.9444 6.1875 19.9444 4.1875C17.9444 2.1875 14.9445 5.1875 14.9445 5.1875M20.5 12C20.5 18.5 18.5 20.5 12 20.5C5.5 20.5 3.5 18.5 3.5 12C3.5 5.5 5.5 3.5 12 3.5"
-            stroke="#000000"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-        />
-    </svg>
-);
+
+export const save_icons = (color = "#000000", size = "15px") => {
+    return (
+        <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            width={size}
+            height={size}
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+            <g
+                id="SVGRepo_tracerCarrier"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+                <path
+                    d="M15 20V15H9V20M18 20H6C4.89543 20 4 19.1046 4 18V6C4 4.89543 4.89543 4 6 4H14.1716C14.702 4 15.2107 4.21071 15.5858 4.58579L19.4142 8.41421C19.7893 8.78929 20 9.29799 20 9.82843V18C20 19.1046 19.1046 20 18 20Z"
+                    stroke={color}
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                ></path>
+            </g>
+        </svg>
+    );
+};
+
+export const edit_icons = (color = "#000000", size = "15px") => {
+    return (
+        <svg
+            width={size}
+            height={size}
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path
+                d="M18.9445 9.1875L14.9445 5.1875M18.9445 9.1875L13.946 14.1859C13.2873 14.8446 12.4878 15.3646 11.5699 15.5229C10.6431 15.6828 9.49294 15.736 8.94444 15.1875C8.39595 14.639 8.44915 13.4888 8.609 12.562C8.76731 11.6441 9.28735 10.8446 9.946 10.1859L14.9445 5.1875M18.9445 9.1875C18.9445 9.1875 21.9444 6.1875 19.9444 4.1875C17.9444 2.1875 14.9445 5.1875 14.9445 5.1875M20.5 12C20.5 18.5 18.5 20.5 12 20.5C5.5 20.5 3.5 18.5 3.5 12C3.5 5.5 5.5 3.5 12 3.5"
+                stroke={color}
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+        </svg>
+    );
+};
+
+export const xmark_icons = (color = "#000000", size = "12px") => {
+    return (
+        <svg
+            viewBox="0 0 24 24"
+            width={size}
+            height={size}
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+            <g
+                id="SVGRepo_tracerCarrier"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+                <path
+                    d="M17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289Z"
+                    fill={color}
+                ></path>
+            </g>
+        </svg>
+    );
+};
 
 export const plus_people = (
     <svg
@@ -124,7 +179,7 @@ export const trash = (
                 stroke="#000"
                 strokeWidth="1.5"
                 strokeLinecap="round"
-            ></path>{" "}
+            ></path>
         </g>
     </svg>
 );
@@ -206,7 +261,7 @@ export const addUser = (
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="1"
-        viewBox="0 0 30 30"
+        viewBox="0 0 24 24"
         width="24"
         xmlns="http://www.w3.org/2000/svg"
     >
@@ -218,7 +273,7 @@ export const addUser = (
 );
 
 export const loadingIcon = (
-        <svg
+    <svg
         aria-hidden="true"
         className="w-4 h-4 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-white"
         viewBox="0 0 100 101"
@@ -234,25 +289,68 @@ export const loadingIcon = (
             fill="currentFill"
         />
     </svg>
-)
-
+);
+export const loadingP_icons = () => {
+    return (
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="1em"
+            height="1em"
+            viewBox="0 0 24 24"
+        >
+            <circle cx="18" cy="12" r="0" fill="currentColor">
+                <animate
+                    attributeName="r"
+                    begin=".67"
+                    calcMode="spline"
+                    dur="1.5s"
+                    keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+                    repeatCount="indefinite"
+                    values="0;2;0;0"
+                />
+            </circle>
+            <circle cx="12" cy="12" r="0" fill="currentColor">
+                <animate
+                    attributeName="r"
+                    begin=".33"
+                    calcMode="spline"
+                    dur="1.5s"
+                    keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+                    repeatCount="indefinite"
+                    values="0;2;0;0"
+                />
+            </circle>
+            <circle cx="6" cy="12" r="0" fill="currentColor">
+                <animate
+                    attributeName="r"
+                    begin="0"
+                    calcMode="spline"
+                    dur="1.5s"
+                    keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+                    repeatCount="indefinite"
+                    values="0;2;0;0"
+                />
+            </circle>
+        </svg>
+    );
+};
 
 export const arrow = (
-            <svg
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width={zise}
+        height={zise}
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+    >
+        <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M19 9l-7 7-7-7"
+        />
+    </svg>
+);
 
-                xmlns="http://www.w3.org/2000/svg"
-                width={zise}
-                height={zise}
-                fill="none"
-                viewBox="0 0 30 30"
-                stroke="currentColor"
-            >
-                <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M19 9l-7 7-7-7"
-                />
-            </svg>
-    );
-
+export default edit_icons;

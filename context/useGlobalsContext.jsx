@@ -4,11 +4,20 @@ export const GlobalContext = createContext();
 
 export const ProviderProvider = ({ children }) => {
     const [modalProvider, setModalProvider] = useState(false);
+    const [qouteIdPvdSel, seQouteIdPvdSel] = useState("");
+    const [qouteIdAgtSel, seQouteIdAgtSel] = useState("");
+    
+
 
     return (
         <GlobalContext.Provider
             value={{
-                modalProvider
+                modalProvider,
+                seQouteIdPvdSel,
+                seQouteIdAgtSel,
+                qouteIdPvdSel,
+                qouteIdAgtSel
+                
             }}
         >
             {children}

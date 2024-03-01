@@ -1,0 +1,35 @@
+import type { GraphQLResolveInfo } from "graphql";
+import { AggregateQoutesArgs } from "./args/AggregateQoutesArgs";
+import { CreateManyQoutesArgs } from "./args/CreateManyQoutesArgs";
+import { CreateOneQoutesArgs } from "./args/CreateOneQoutesArgs";
+import { DeleteManyQoutesArgs } from "./args/DeleteManyQoutesArgs";
+import { DeleteOneQoutesArgs } from "./args/DeleteOneQoutesArgs";
+import { FindFirstQoutesArgs } from "./args/FindFirstQoutesArgs";
+import { FindFirstQoutesOrThrowArgs } from "./args/FindFirstQoutesOrThrowArgs";
+import { FindManyQoutesArgs } from "./args/FindManyQoutesArgs";
+import { FindUniqueQoutesArgs } from "./args/FindUniqueQoutesArgs";
+import { FindUniqueQoutesOrThrowArgs } from "./args/FindUniqueQoutesOrThrowArgs";
+import { GroupByQoutesArgs } from "./args/GroupByQoutesArgs";
+import { UpdateManyQoutesArgs } from "./args/UpdateManyQoutesArgs";
+import { UpdateOneQoutesArgs } from "./args/UpdateOneQoutesArgs";
+import { UpsertOneQoutesArgs } from "./args/UpsertOneQoutesArgs";
+import { Qoutes } from "../../../models/Qoutes";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AggregateQoutes } from "../../outputs/AggregateQoutes";
+import { QoutesGroupBy } from "../../outputs/QoutesGroupBy";
+export declare class QoutesCrudResolver {
+    aggregateQoutes(ctx: any, info: GraphQLResolveInfo, args: AggregateQoutesArgs): Promise<AggregateQoutes>;
+    createManyQoutes(ctx: any, info: GraphQLResolveInfo, args: CreateManyQoutesArgs): Promise<AffectedRowsOutput>;
+    createOneQoutes(ctx: any, info: GraphQLResolveInfo, args: CreateOneQoutesArgs): Promise<Qoutes>;
+    deleteManyQoutes(ctx: any, info: GraphQLResolveInfo, args: DeleteManyQoutesArgs): Promise<AffectedRowsOutput>;
+    deleteOneQoutes(ctx: any, info: GraphQLResolveInfo, args: DeleteOneQoutesArgs): Promise<Qoutes | null>;
+    findFirstQoutes(ctx: any, info: GraphQLResolveInfo, args: FindFirstQoutesArgs): Promise<Qoutes | null>;
+    findFirstQoutesOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindFirstQoutesOrThrowArgs): Promise<Qoutes | null>;
+    findManyQoutes(ctx: any, info: GraphQLResolveInfo, args: FindManyQoutesArgs): Promise<Qoutes[]>;
+    findUniqueQoutes(ctx: any, info: GraphQLResolveInfo, args: FindUniqueQoutesArgs): Promise<Qoutes | null>;
+    findUniqueQoutesOrThrow(ctx: any, info: GraphQLResolveInfo, args: FindUniqueQoutesOrThrowArgs): Promise<Qoutes | null>;
+    groupByQoutes(ctx: any, info: GraphQLResolveInfo, args: GroupByQoutesArgs): Promise<QoutesGroupBy[]>;
+    updateManyQoutes(ctx: any, info: GraphQLResolveInfo, args: UpdateManyQoutesArgs): Promise<AffectedRowsOutput>;
+    updateOneQoutes(ctx: any, info: GraphQLResolveInfo, args: UpdateOneQoutesArgs): Promise<Qoutes | null>;
+    upsertOneQoutes(ctx: any, info: GraphQLResolveInfo, args: UpsertOneQoutesArgs): Promise<Qoutes>;
+}

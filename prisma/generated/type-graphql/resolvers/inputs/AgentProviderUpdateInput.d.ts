@@ -1,5 +1,6 @@
 import { DateTimeFieldUpdateOperationsInput } from "../inputs/DateTimeFieldUpdateOperationsInput";
 import { ProvidersUpdateOneRequiredWithoutAgentProviderNestedInput } from "../inputs/ProvidersUpdateOneRequiredWithoutAgentProviderNestedInput";
+import { QoutesUpdateManyWithoutAgentProviderNestedInput } from "../inputs/QoutesUpdateManyWithoutAgentProviderNestedInput";
 import { StringFieldUpdateOperationsInput } from "../inputs/StringFieldUpdateOperationsInput";
 export declare class AgentProviderUpdateInput {
     id?: StringFieldUpdateOperationsInput | undefined;
@@ -10,4 +11,5 @@ export declare class AgentProviderUpdateInput {
     email?: StringFieldUpdateOperationsInput | undefined;
     phone?: StringFieldUpdateOperationsInput | undefined;
     provider?: ProvidersUpdateOneRequiredWithoutAgentProviderNestedInput | undefined;
+    qoutes?: QoutesUpdateManyWithoutAgentProviderNestedInput | undefined;
 }

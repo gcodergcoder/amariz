@@ -1,5 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ProvidersCountAgentProviderArgs = void 0;
+exports.QoutesCountQoutesDetailsArgs = exports.ProvidersCountQuotesArgs = exports.ProvidersCountAgentProviderArgs = exports.AgentProviderCountQoutesArgs = void 0;
+var AgentProviderCountQoutesArgs_1 = require("./AgentProviderCountQoutesArgs");
+Object.defineProperty(exports, "AgentProviderCountQoutesArgs", { enumerable: true, get: function () { return AgentProviderCountQoutesArgs_1.AgentProviderCountQoutesArgs; } });
 var ProvidersCountAgentProviderArgs_1 = require("./ProvidersCountAgentProviderArgs");
 Object.defineProperty(exports, "ProvidersCountAgentProviderArgs", { enumerable: true, get: function () { return ProvidersCountAgentProviderArgs_1.ProvidersCountAgentProviderArgs; } });
+var ProvidersCountQuotesArgs_1 = require("./ProvidersCountQuotesArgs");
+Object.defineProperty(exports, "ProvidersCountQuotesArgs", { enumerable: true, get: function () { return ProvidersCountQuotesArgs_1.ProvidersCountQuotesArgs; } });
+var QoutesCountQoutesDetailsArgs_1 = require("./QoutesCountQoutesDetailsArgs");
+Object.defineProperty(exports, "QoutesCountQoutesDetailsArgs", { enumerable: true, get: function () { return QoutesCountQoutesDetailsArgs_1.QoutesCountQoutesDetailsArgs; } });

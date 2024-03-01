@@ -16,10 +16,18 @@ export default function Home() {
             <link rel="icon" href="/favicon.ico" />
 
             <main className="flex items-center justify-center h-screen">
-
-                    <Link href={"/providers"}>
-                        <span className="underline ">provedores</span>
-                    </Link>
+                <ul>
+                    <li>
+                        <Link href={"/client"}>
+                            <span className="underline">provedores</span>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href={"/quotes"}>
+                            <span className="underline ">cotizaciones</span>
+                        </Link>
+                    </li>
+                </ul>
             </main>
         </>
     );
