@@ -6,8 +6,7 @@ export const ProviderProvider = ({ children }) => {
     const [modalProvider, setModalProvider] = useState(false);
     const [qouteIdPvdSel, seQouteIdPvdSel] = useState("");
     const [qouteIdAgtSel, seQouteIdAgtSel] = useState("");
-    
-
+    const [viewPDF, setViewPDF] = useState(false);
 
     return (
         <GlobalContext.Provider
@@ -16,8 +15,9 @@ export const ProviderProvider = ({ children }) => {
                 seQouteIdPvdSel,
                 seQouteIdAgtSel,
                 qouteIdPvdSel,
-                qouteIdAgtSel
-                
+                qouteIdAgtSel,
+                viewPDF,
+                setViewPDF
             }}
         >
             {children}

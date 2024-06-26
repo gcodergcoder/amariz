@@ -5,6 +5,7 @@ export declare class QoutesGroupBy {
     id: string;
     createdAt: Date;
     updatedAt: Date;
+    expireAt: Date;
     providerId: string;
     agentProviderId: string;
     _count: QoutesCountAggregate | null;

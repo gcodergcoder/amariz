@@ -4,7 +4,7 @@ import { QoutesWhereInput } from "../../../inputs/QoutesWhereInput";
 export declare class GroupByQoutesArgs {
     where?: QoutesWhereInput | undefined;
     orderBy?: QoutesOrderByWithAggregationInput[] | undefined;
-    by: Array<"id" | "createdAt" | "updatedAt" | "providerId" | "agentProviderId">;
+    by: Array<"id" | "createdAt" | "updatedAt" | "expireAt" | "providerId" | "agentProviderId">;
     having?: QoutesScalarWhereWithAggregatesInput | undefined;
     take?: number | undefined;
     skip?: number | undefined;

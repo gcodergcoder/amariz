@@ -11,6 +11,7 @@ export declare class QoutesWhereUniqueInput {
     NOT?: QoutesWhereInput[] | undefined;
     createdAt?: DateTimeFilter | undefined;
     updatedAt?: DateTimeFilter | undefined;
+    expireAt?: DateTimeFilter | undefined;
     providerId?: StringFilter | undefined;
     agentProviderId?: StringFilter | undefined;
     provider?: ProvidersRelationFilter | undefined;

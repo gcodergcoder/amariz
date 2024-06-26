@@ -6,6 +6,7 @@ export declare class QoutesUpdateWithoutAgentProviderInput {
     id?: StringFieldUpdateOperationsInput | undefined;
     createdAt?: DateTimeFieldUpdateOperationsInput | undefined;
     updatedAt?: DateTimeFieldUpdateOperationsInput | undefined;
+    expireAt?: DateTimeFieldUpdateOperationsInput | undefined;
     provider?: ProvidersUpdateOneRequiredWithoutQuotesNestedInput | undefined;
     qoutesDetails?: QoutesDetailsUpdateManyWithoutQoutesNestedInput | undefined;
 }

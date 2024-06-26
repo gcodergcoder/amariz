@@ -20,11 +20,11 @@ const UPDATE_QOUTES = gql`
 `;
 
 const CREATE_QDETAIL = gql`
-    mutation CreateOneQoutesDetails($data: QoutesDetailsCreateInput!) {
-        createOneQoutesDetails(data: $data) {
-            id
-        }
-    }
+ mutation CreateOneQoutesDetails($data: QoutesDetailsCreateInput!) {
+  createOneQoutesDetails(data: $data) {
+    id
+  }
+}
 `;
 
 const UPDATE_QDETAIL = gql`

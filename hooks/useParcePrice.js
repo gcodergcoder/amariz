@@ -1,12 +1,13 @@
 const useParsePrice = () => {
     const parcePrice = (value) => {
-
         function reverseString(str) {
             return str.split("").reduce((x, y) => y + x);
         }
         let result = "";
         let rev = "";
         const numero_decimal = value?.toString().split(".");
+        // Si longitu es uno, nnno hay decimal
+        // Sino,  hay decimales
         rev = reverseString(numero_decimal[0]);
         for (let i = 0; i < rev.length; i++) {
             result = result + rev[i];
@@ -22,10 +23,14 @@ const useParsePrice = () => {
                 result = result + ".";
             }
         }
-        if(numero_decimal.length == 1){
-            return "$"+reverseString(result)
+        result = reverseString(result)
+        if(result[0] === "."){
+            result = result.substring(1)
+        }
+        if(numero_decimal.length === 1){
+            return "$"+result
         }else{
-            return "$"+reverseString(result)+","+numero_decimal[1].slice(0,2)
+            return "$"+result+","+numero_decimal[1].slice(0,2)
         }
     };
     return { parcePrice };

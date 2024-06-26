@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 // import dynamic from "next/dynamic";
-import { point, addUser, edit_icons } from "@/utlis/icons";
+import { point_icon, addUser, edit_icons } from "@/utlis/icons";
 import { useQuery } from "@apollo/client";
 import { LIST_PROVIDER } from "@/graphql/client/query";
 import Client from "./client";
@@ -226,7 +226,7 @@ const AgProvider = ({ agent, setDetailAgtPvd, setModalAgtPvd }) => {
                         editAgtProvider();
                     }}
                 >
-                    {point}
+                    {point_icon}
                 </button>
             </td>
         </tr>

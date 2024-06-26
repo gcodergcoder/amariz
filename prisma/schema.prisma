@@ -41,6 +41,7 @@ model Qoutes {
   id            String          @id @default(cuid())
   createdAt     DateTime        @default(now())
   updatedAt     DateTime        @updatedAt
+  expireAt      DateTime
   provider   Providers @relation(fields: [providerId], references: [id])
   providerId String
   agentProvider   AgentProvider @relation(fields: [agentProviderId], references: [id])

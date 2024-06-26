@@ -88,7 +88,7 @@ module.exports = {
                 "-0.3": "0.2px",
             },
             backgroundImage: {
-                "icons-img": "url('https://i.redd.it/qwd83nc4xxf41.jpg')",
+                "logo-img": "url('/img/logo4.jpg')",
                 },
             keyframes: {
                 bounce_horizontal: {
