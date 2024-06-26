@@ -67,7 +67,7 @@ const TableReact = () => {
                 <HeaderImagen/>
                 <div className="w-full px-2">
                     <h1 className="font-medium mb-4 text-center py-6 text-3xl">
-                        Clientes
+                        Clientes2
                     </h1>
                     <div className="flex justify-between h-10 w-full">
                         <input
@@ -82,7 +82,7 @@ const TableReact = () => {
                             }}
                             className="px-4 bg-amariz_6 text-white h-full rounded"
                         >
-                            Nuevo
+                            Nuevo2
                         </button>
                     </div>
                     <div className="w-full overflow-x-scroll md:overflow-auto max-w-7xl 2xl:max-w-none mt-2">

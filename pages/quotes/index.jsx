@@ -21,6 +21,7 @@ const css_tr =
 const Index = () => {
     const { data, error, refetch } = useQuery(QOUTES);
     const [newQoute, setNewQoute] = useState(false);
+    console.log("data....", data)
 
     return (
         <div className="flex p-2 text-sm text-gray-800">
@@ -35,7 +36,7 @@ const Index = () => {
                         />
                     </div>
                     <button className="w-2/12 mx-1  bg-gray-100 h-10  ">
-                        boton
+                        boton2
                     </button>
                     <button onClick={()=>{setNewQoute(!newQoute)}} className="w-2/12 mx-1  bg-gray-100 h-10  ">
                         Nuevo
