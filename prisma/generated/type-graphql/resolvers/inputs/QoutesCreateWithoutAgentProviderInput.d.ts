@@ -4,7 +4,7 @@ export declare class QoutesCreateWithoutAgentProviderInput {
     id?: string | undefined;
     createdAt?: Date | undefined;
     updatedAt?: Date | undefined;
-    expireAt: Date;
+    expireAt?: Date | undefined;
     provider: ProvidersCreateNestedOneWithoutQuotesInput;
     qoutesDetails?: QoutesDetailsCreateNestedManyWithoutQoutesInput | undefined;
 }

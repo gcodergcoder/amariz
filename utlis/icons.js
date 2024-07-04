@@ -28,51 +28,6 @@ export const save_icons = (color = "#000000", size = "15px") => {
     );
 };
 
-export const edit_icons = (color = "#000000", size = "15px") => {
-    return (
-        <svg
-            width={size}
-            height={size}
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-        >
-            <path
-                d="M18.9445 9.1875L14.9445 5.1875M18.9445 9.1875L13.946 14.1859C13.2873 14.8446 12.4878 15.3646 11.5699 15.5229C10.6431 15.6828 9.49294 15.736 8.94444 15.1875C8.39595 14.639 8.44915 13.4888 8.609 12.562C8.76731 11.6441 9.28735 10.8446 9.946 10.1859L14.9445 5.1875M18.9445 9.1875C18.9445 9.1875 21.9444 6.1875 19.9444 4.1875C17.9444 2.1875 14.9445 5.1875 14.9445 5.1875M20.5 12C20.5 18.5 18.5 20.5 12 20.5C5.5 20.5 3.5 18.5 3.5 12C3.5 5.5 5.5 3.5 12 3.5"
-                stroke={color}
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-            />
-        </svg>
-    );
-};
-
-export const xmark_icons = (color = "#000000", size = "12px") => {
-    return (
-        <svg
-            viewBox="0 0 24 24"
-            width={size}
-            height={size}
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-        >
-            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-            <g
-                id="SVGRepo_tracerCarrier"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-            ></g>
-            <g id="SVGRepo_iconCarrier">
-                <path
-                    d="M17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289Z"
-                    fill={color}
-                ></path>
-            </g>
-        </svg>
-    );
-};
-
 export const plus_people = (
     <svg
         viewBox="0 0 24 24"
@@ -184,46 +139,6 @@ export const trash = (
     </svg>
 );
 
-export const point_icon = (color = "#000000", size = "15px") => {
-    return (
-    <svg
-        width={zise}
-        height={zise}
-        version="1.1"
-        id="_x32_"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="-138.24 -138.24 788.48 788.48"
-        fill={color}
-        stroke={color}
-        strokeWidth="0.00512"
-    >
-        <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-        <g
-            id="SVGRepo_tracerCarrier"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-        ></g>
-        <g id="SVGRepo_iconCarrier">
-            {" "}
-            <style type="text/css"> </style>{" "}
-            <g>
-                {" "}
-                <circle
-                    className="st0"
-                    cx="55.091"
-                    cy="256"
-                    r="55.091"
-                ></circle>{" "}
-                <circle className="st0" cx="256" cy="256" r="55.091"></circle>{" "}
-                <circle
-                    className="st0"
-                    cx="456.909"
-                    cy="256"
-                    r="55.091"
-                ></circle>{" "}
-            </g>{" "}
-        </g>
-    </svg>)}
 
 export const expand = (
     <svg
@@ -251,27 +166,6 @@ export const expand = (
         </g>
     </svg>
 );
-
-export const addUser = (
-    <svg
-        className="feather feather-user-plus"
-        fill="none"
-        height="24"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="1"
-        viewBox="0 0 24 24"
-        width="24"
-        xmlns="http://www.w3.org/2000/svg"
-    >
-        <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-        <circle cx="8.5" cy="7" r="4" />
-        <line x1="20" x2="20" y1="8" y2="14" />
-        <line x1="23" x2="17" y1="11" y2="11" />
-    </svg>
-);
-
 export const loadingIcon = (
     <svg
         aria-hidden="true"
@@ -334,24 +228,6 @@ export const loadingP_icons = () => {
         </svg>
     );
 };
-
-export const arrow = (
-    <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width={zise}
-        height={zise}
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-    >
-        <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M19 9l-7 7-7-7"
-        />
-    </svg>
-);
 
 export const sping_icon = () => {
     return (
@@ -685,26 +561,3 @@ export const plus_icons = (color = "#000000", size = "15px") => {
         </svg>
     );
 };
-
-export const pdf_icons = (color = "#000000", size = "15px") => {
-    return (
-        <svg width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-            <g
-                id="SVGRepo_tracerCarrier"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-            ></g>
-            <g id="SVGRepo_iconCarrier">
-                <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M7 3C5.89543 3 5 3.89543 5 5V17.2C5 18.0566 5.00078 18.6389 5.03755 19.089C5.07337 19.5274 5.1383 19.7516 5.21799 19.908C5.40973 20.2843 5.7157 20.5903 6.09202 20.782C6.24842 20.8617 6.47262 20.9266 6.91104 20.9624C7.36113 20.9992 7.94342 21 8.8 21H15.2C16.0566 21 16.6389 20.9992 17.089 20.9624C17.5274 20.9266 17.7516 20.8617 17.908 20.782C18.2843 20.5903 18.5903 20.2843 18.782 19.908C18.8617 19.7516 18.9266 19.5274 18.9624 19.089C18.9992 18.6389 19 18.0566 19 17.2V13C19 10.7909 17.2091 9 15 9H14.25C12.4551 9 11 7.54493 11 5.75C11 4.23122 9.76878 3 8.25 3H7ZM10 1C16.0751 1 21 5.92487 21 12V17.2413C21 18.0463 21 18.7106 20.9558 19.2518C20.9099 19.8139 20.8113 20.3306 20.564 20.816C20.1805 21.5686 19.5686 22.1805 18.816 22.564C18.3306 22.8113 17.8139 22.9099 17.2518 22.9558C16.7106 23 16.0463 23 15.2413 23H8.75868C7.95372 23 7.28936 23 6.74817 22.9558C6.18608 22.9099 5.66937 22.8113 5.18404 22.564C4.43139 22.1805 3.81947 21.5686 3.43597 20.816C3.18868 20.3306 3.09012 19.8139 3.04419 19.2518C2.99998 18.7106 2.99999 18.0463 3 17.2413L3 5C3 2.79086 4.79086 1 7 1H10ZM17.9474 7.77263C16.7867 5.59506 14.7572 3.95074 12.3216 3.30229C12.7523 4.01713 13 4.85463 13 5.75C13 6.44036 13.5596 7 14.25 7H15C16.0712 7 17.0769 7.28073 17.9474 7.77263Z"
-                    fill={color}
-                ></path>
-            </g>
-        </svg>
-    );
-};
-
-export default edit_icons;

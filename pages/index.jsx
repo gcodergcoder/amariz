@@ -16,12 +16,12 @@ export default function Home() {
                 <ul>
                     <li>
                         <Link href={"/client"}>
-                            <span className="underline">provedores2</span>
+                            <span className="underline">Clientes</span>
                         </Link>
                     </li>
                     <li>
                         <Link href={"/quotes"}>
-                            <span className="underline ">cotizaciones</span>
+                            <span className="underline ">Cotizaciones</span>
                         </Link>
                     </li>
                 </ul>

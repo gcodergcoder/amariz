@@ -25,7 +25,7 @@ tslib_1.__decorate([
 ], QoutesCreateManyProviderInput.prototype, "updatedAt", void 0);
 tslib_1.__decorate([
     TypeGraphQL.Field(_type => Date, {
-        nullable: false
+        nullable: true
     }),
     tslib_1.__metadata("design:type", Date)
 ], QoutesCreateManyProviderInput.prototype, "expireAt", void 0);

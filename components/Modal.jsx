@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { ButtonLoading } from "../../components/ButtonLoading";
+import { ButtonLoading } from "./ButtonLoading";
 
 const Modal = ({children, title, loading, closeModal, showCancelBtt, cleanData}) => {
 

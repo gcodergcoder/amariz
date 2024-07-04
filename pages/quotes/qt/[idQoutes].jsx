@@ -12,6 +12,7 @@ import useFormData from "@/hooks/useFormData";
 import useParsePrice from "../../../hooks/useParcePrice";
 import { isObject } from "class-validator";
 import Link from "next/link";
+import Xmark from "../../../utlis/Icons/Xmark";
 import {
     edit_icons,
     xmark_icons,
@@ -30,6 +31,10 @@ import HeaderImagen from "../../../components/HeaderImagen";
 import { ButtonIcon } from "../../../components/ButtonIcon";
 import { ButtonIconLoadinig } from "../../../components/ButtonIconLoadinig";
 import { GlobalContext } from "../../../context/useGlobalsContext";
+import DateAdder from "../DateAdder"
+import Edit from "../../../utlis/Icons/Edit";
+import PlusPeople from "../../../utlis/Icons/PlusPeople";
+import Pdf from "../../../utlis/Icons/Pdf";
 let sumatory = [
     {
         id: "sub",
@@ -71,7 +76,7 @@ const css_tr =
 const Index = () => {
     const router = useRouter();
     const { idQoutes } = router.query;
-    const { qouteIdAgtSel, qouteIdPvdSel } = useContext(GlobalContext);
+    const { qouteIdAgtSel, qouteIdClientSel } = useContext(GlobalContext);
     const { parcePrice } = useParsePrice();
     const { form, formData, updateFormData } = useFormData({});
     const { mutationEffect } = useMutacionEffect(null);
@@ -79,6 +84,7 @@ const Index = () => {
     const [iva, setIva] = useState(0);
     const [total, setTotal] = useState(0);
     const [editQoute, setEditQoute] = useState(false);
+    const [newDate, setNewDate] = useState("");
     const [newQoute, setNewQoute] = useState(false);
     const [options, setOptions] = useState(false);
     const [update, { data: dataUpd, error: errorUpd, loading: loadingUpd }] =
@@ -154,7 +160,7 @@ const Index = () => {
                 data: {
                     provider: {
                         connect: {
-                            id: qouteIdPvdSel,
+                            id: qouteIdClientSel,
                         },
                     },
                     agentProvider: {
@@ -230,7 +236,8 @@ const Index = () => {
                                 <div>
                                     {editQoute ? (
                                         <div className="flex">
-                                            {qouteIdPvdSel && qouteIdAgtSel ? (
+                                            {qouteIdClientSel &&
+                                            qouteIdAgtSel ? (
                                                 <ButtonIconLoadinig
                                                     onclick={() => {
                                                         updateCouteProvider();
@@ -246,8 +253,10 @@ const Index = () => {
                                             <ButtonIcon
                                                 arg={!editQoute}
                                                 onclick={setEditQoute}
-                                                icon={xmark_icons()}
+                                                Icon={Xmark}
                                                 bg_color="white"
+                                                colorIcon="#000"
+                                                ziseIcon="12px"
                                             />
                                         </div>
                                     ) : (
@@ -256,57 +265,50 @@ const Index = () => {
                                                 <ButtonIcon
                                                     onclick={setOptions}
                                                     arg={!options}
-                                                    icon={point_icon("#FFF")}
-                                                    bg_color="amariz_4"
+                                                    Icon={Edit}
+                                                    bg_color="white"
+                                                    ziseIcon="12px"
                                                 />
                                             ) : (
-                                                <div className="absolute top-5 right-2 bg-white py-2 px-6 shadow-md rounded-md">
+                                                <div className="absolute top-5 right-2 bg-white py-2 px-3 shadow-md rounded-md">
                                                     <ButtonIcon
                                                         arg={!editQoute}
                                                         name="Editar"
                                                         onclick={setEditQoute}
-                                                        icon={edit_icons(
-                                                            "#000",
-                                                            "21px"
-                                                        )}
-                                                        css="mt-1 text-black hover:bg-fuchsia-100"
+                                                        Icon={Edit}
+                                                        colorIcon="#000"
+                                                        ziseIcon="21px"
+                                                        css="mt-1 text-black hover:bg-fuchsia-100 py-1 px-2"
                                                     />
                                                     <ButtonIcon
                                                         arg={true}
                                                         name="Detalle"
                                                         onclick={setNewQoute}
-                                                        icon={plus_icons(
-                                                            "#000",
-                                                            "21px"
-                                                        )}
-                                                        css="mr-3 mt-1 text-black hover:bg-fuchsia-100"
+                                                        Icon={PlusPeople}
+                                                        colorIcon="#000"
+                                                        ziseIcon="21px"
+                                                        css="mt-1 text-black hover:bg-fuchsia-100 py-1 px-2"
                                                     />
                                                     <Link
                                                         href={`/pdf/${idQoutes}`}
                                                         target="_blank"
                                                     >
                                                         <ButtonIcon
-                                                            icon={pdf_icons(
-                                                                "#000",
-                                                                "21px"
-                                                            )}
+                                                            Icon={Pdf}
                                                             onclick={() => {}}
                                                             arg={undefined}
                                                             name="Exportar"
-                                                            css="mr-3 mt-1 text-black hover:bg-fuchsia-100"
+                                                            css="mt-1 text-black hover:bg-fuchsia-100 py-1 px-2"
                                                         />
                                                     </Link>
 
                                                     <ButtonIcon
-                                                        icon={xmark_icons(
-                                                            "#000",
-                                                            "21px"
-                                                        )}
+                                                        Icon={Xmark}
                                                         onclick={setOptions}
                                                         arg={!options}
                                                         name="Cerrar"
                                                         bg_color="gray-100"
-                                                        css="mr-3 mt-1 text-black"
+                                                        css="mt-1 text-black py-1 px-2"
                                                     />
                                                 </div>
                                             )}
@@ -381,7 +383,7 @@ const Index = () => {
                                 <ul>
                                     <li>
                                         <span className="font-semibold  pr-2">
-                                            Fecha emisión
+                                            Fecha emisión:
                                         </span>
                                         <span>
                                             {data?.findUniqueQoutes?.createdAt.slice(
@@ -391,10 +393,11 @@ const Index = () => {
                                         </span>
                                     </li>
                                     <li>
-                                        <span className="font-semibold  pr-2">
-                                            Fecha vencimiento
+                                        <span className="font-semibold pr-2">
+                                            Fecha vencimiento:
                                         </span>
-                                        <span>items</span>
+                                        <span>{newDate}</span>
+                                        <DateAdder initialDate={data?.findUniqueQoutes?.createdAt.slice(0,10)} newDate={newDate} setNewDate={setNewDate}/>
                                     </li>
                                 </ul>
                             </div>
@@ -640,7 +643,7 @@ const BotonsPack = ({ edit, setEdit, loadingDet }) => {
                     <ButtonIcon
                         onclick={setEdit}
                         arg={!edit}
-                        icon={xmark_icons()}
+                        Icon={Xmark}
                     />
                     {loadingDet ? (
                         loadingP_icons()
@@ -658,7 +661,7 @@ const BotonsPack = ({ edit, setEdit, loadingDet }) => {
                     css="mx-4"
                     arg={!edit}
                     onclick={setEdit}
-                    icon={edit_icons()}
+                    Icon={Edit}
                 />
             )}
         </>

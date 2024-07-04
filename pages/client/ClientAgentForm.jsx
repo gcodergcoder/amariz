@@ -5,9 +5,9 @@ import useFormData from "@/hooks/useFormData";
 import { useMutation } from "@apollo/client";
 import useMutacionEffect from "@/hooks/useMutacionEffect";
 import { CREATE_AGENT, UPDATE_AGENT } from "@/graphql/client/mutation";
-import Modal from "./Modal";
+import Modal from "../../components/Modal";
 
-const AgentProvider = ({ setModal, refetch, detail = {}, cleanData }) => {
+const ClientAgentForm = ({ setModal, refetch, detail = {}, cleanData }) => {
     const { form, formData, updateFormData } = useFormData({});
     const [loadingG, setLoadingG] = useState(false);
     const [create, { data, error }] = useMutation(CREATE_AGENT);
@@ -116,11 +116,11 @@ const AgentProvider = ({ setModal, refetch, detail = {}, cleanData }) => {
     );
 };
 
-AgentProvider.propTypes = {
+ClientAgentForm.propTypes = {
     setModal: PropTypes.func,
     refetch: PropTypes.func,
     cleanData: PropTypes.func,
     detail: PropTypes.object,
 };
 
-export default AgentProvider;
+export default ClientAgentForm;
