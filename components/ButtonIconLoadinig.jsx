@@ -9,7 +9,7 @@ const ButtonIconLoadinig = ({icon, type="button", loading, onclick, arg=undefine
                 onClick={() => onclick()}
                 className={`flex items-center mx-1 justify-center transition ease-in-out delay-150 hover:-translate-1 hover:scale-125 duration-300 rounded-md p-${p} ${css} bg-${bg_color}`}
             >
-               {loading ? loadingP_icons() : icon}
+            {loading ? loadingP_icons() : icon}
             </button>
     );
 };

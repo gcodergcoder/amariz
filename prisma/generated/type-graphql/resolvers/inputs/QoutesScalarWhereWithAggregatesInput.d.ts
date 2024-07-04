@@ -7,6 +7,7 @@ export declare class QoutesScalarWhereWithAggregatesInput {
     id?: StringWithAggregatesFilter | undefined;
     createdAt?: DateTimeWithAggregatesFilter | undefined;
     updatedAt?: DateTimeWithAggregatesFilter | undefined;
+    expireAt?: DateTimeWithAggregatesFilter | undefined;
     providerId?: StringWithAggregatesFilter | undefined;
     agentProviderId?: StringWithAggregatesFilter | undefined;
 }

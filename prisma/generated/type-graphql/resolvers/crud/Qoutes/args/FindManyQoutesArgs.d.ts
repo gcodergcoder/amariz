@@ -7,5 +7,5 @@ export declare class FindManyQoutesArgs {
     cursor?: QoutesWhereUniqueInput | undefined;
     take?: number | undefined;
     skip?: number | undefined;
-    distinct?: Array<"id" | "createdAt" | "updatedAt" | "providerId" | "agentProviderId"> | undefined;
+    distinct?: Array<"id" | "createdAt" | "updatedAt" | "expireAt" | "providerId" | "agentProviderId"> | undefined;
 }

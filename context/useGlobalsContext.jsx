@@ -3,21 +3,21 @@ import React, { createContext, useState } from "react";
 export const GlobalContext = createContext();
 
 export const ProviderProvider = ({ children }) => {
-    const [modalProvider, setModalProvider] = useState(false);
-    const [qouteIdPvdSel, seQouteIdPvdSel] = useState("");
+    const [modalClient, setModalClient] = useState(false);
+    const [qouteIdClientSel, setQouteIdClientSel] = useState("");
     const [qouteIdAgtSel, seQouteIdAgtSel] = useState("");
-    
-
+    const [viewPDF, setViewPDF] = useState(false);
 
     return (
         <GlobalContext.Provider
             value={{
-                modalProvider,
-                seQouteIdPvdSel,
+                modalClient,
+                setQouteIdClientSel,
                 seQouteIdAgtSel,
-                qouteIdPvdSel,
-                qouteIdAgtSel
-                
+                qouteIdClientSel,
+                qouteIdAgtSel,
+                viewPDF,
+                setViewPDF
             }}
         >
             {children}

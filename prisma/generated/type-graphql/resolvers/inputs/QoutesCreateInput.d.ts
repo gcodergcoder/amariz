@@ -5,6 +5,7 @@ export declare class QoutesCreateInput {
     id?: string | undefined;
     createdAt?: Date | undefined;
     updatedAt?: Date | undefined;
+    expireAt?: Date | undefined;
     provider: ProvidersCreateNestedOneWithoutQuotesInput;
     agentProvider: AgentProviderCreateNestedOneWithoutQoutesInput;
     qoutesDetails?: QoutesDetailsCreateNestedManyWithoutQoutesInput | undefined;

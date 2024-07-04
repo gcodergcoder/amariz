@@ -28,51 +28,6 @@ export const save_icons = (color = "#000000", size = "15px") => {
     );
 };
 
-export const edit_icons = (color = "#000000", size = "15px") => {
-    return (
-        <svg
-            width={size}
-            height={size}
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-        >
-            <path
-                d="M18.9445 9.1875L14.9445 5.1875M18.9445 9.1875L13.946 14.1859C13.2873 14.8446 12.4878 15.3646 11.5699 15.5229C10.6431 15.6828 9.49294 15.736 8.94444 15.1875C8.39595 14.639 8.44915 13.4888 8.609 12.562C8.76731 11.6441 9.28735 10.8446 9.946 10.1859L14.9445 5.1875M18.9445 9.1875C18.9445 9.1875 21.9444 6.1875 19.9444 4.1875C17.9444 2.1875 14.9445 5.1875 14.9445 5.1875M20.5 12C20.5 18.5 18.5 20.5 12 20.5C5.5 20.5 3.5 18.5 3.5 12C3.5 5.5 5.5 3.5 12 3.5"
-                stroke={color}
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-            />
-        </svg>
-    );
-};
-
-export const xmark_icons = (color = "#000000", size = "12px") => {
-    return (
-        <svg
-            viewBox="0 0 24 24"
-            width={size}
-            height={size}
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-        >
-            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-            <g
-                id="SVGRepo_tracerCarrier"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-            ></g>
-            <g id="SVGRepo_iconCarrier">
-                <path
-                    d="M17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289Z"
-                    fill={color}
-                ></path>
-            </g>
-        </svg>
-    );
-};
-
 export const plus_people = (
     <svg
         viewBox="0 0 24 24"
@@ -184,46 +139,6 @@ export const trash = (
     </svg>
 );
 
-export const point = (
-    <svg
-        width={zise}
-        height={zise}
-        version="1.1"
-        id="_x32_"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="-138.24 -138.24 788.48 788.48"
-        fill="#000000"
-        stroke="#000000"
-        strokeWidth="0.00512"
-    >
-        <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-        <g
-            id="SVGRepo_tracerCarrier"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-        ></g>
-        <g id="SVGRepo_iconCarrier">
-            {" "}
-            <style type="text/css"> </style>{" "}
-            <g>
-                {" "}
-                <circle
-                    className="st0"
-                    cx="55.091"
-                    cy="256"
-                    r="55.091"
-                ></circle>{" "}
-                <circle className="st0" cx="256" cy="256" r="55.091"></circle>{" "}
-                <circle
-                    className="st0"
-                    cx="456.909"
-                    cy="256"
-                    r="55.091"
-                ></circle>{" "}
-            </g>{" "}
-        </g>
-    </svg>
-);
 
 export const expand = (
     <svg
@@ -251,27 +166,6 @@ export const expand = (
         </g>
     </svg>
 );
-
-export const addUser = (
-    <svg
-        className="feather feather-user-plus"
-        fill="none"
-        height="24"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="1"
-        viewBox="0 0 24 24"
-        width="24"
-        xmlns="http://www.w3.org/2000/svg"
-    >
-        <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-        <circle cx="8.5" cy="7" r="4" />
-        <line x1="20" x2="20" y1="8" y2="14" />
-        <line x1="23" x2="17" y1="11" y2="11" />
-    </svg>
-);
-
 export const loadingIcon = (
     <svg
         aria-hidden="true"
@@ -335,22 +229,335 @@ export const loadingP_icons = () => {
     );
 };
 
-export const arrow = (
-    <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width={zise}
-        height={zise}
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-    >
-        <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M19 9l-7 7-7-7"
-        />
-    </svg>
-);
+export const sping_icon = () => {
+    return (
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
+            style={{
+                margin: "auto",
+                background: "rgb(F, F, F)",
+                display: "block",
+                shapeRendering: "auto",
+            }}
+            width="50px"
+            height="50px"
+            viewBox="0 0 100 100"
+            preserveAspectRatio="xMidYMid"
+        >
+            <g transform="translate(72,50)">
+                <g transform="rotate(0)">
+                    <circle cx={0} cy={0} r={6} fill="#c62266" fillOpacity={1}>
+                        <animateTransform
+                            attributeName="transform"
+                            type="scale"
+                            begin="-2.195121951219512s"
+                            values="1.76 1;1 1"
+                            keyTimes="0;1"
+                            dur="2.4390243902439024s"
+                            repeatCount="indefinite"
+                        />
+                        <animate
+                            attributeName="fill-opacity"
+                            keyTimes="0;1"
+                            dur="2.4390243902439024s"
+                            repeatCount="indefinite"
+                            values="1;0"
+                            begin="-2.195121951219512s"
+                        />
+                    </circle>
+                </g>
+            </g>
+            <g transform="translate(67.79837387624885,62.93127555043441)">
+                <g transform="rotate(36)">
+                    <circle
+                        cx={0}
+                        cy={0}
+                        r={6}
+                        fill="#c62266"
+                        fillOpacity="0.9"
+                    >
+                        <animateTransform
+                            attributeName="transform"
+                            type="scale"
+                            begin="-1.9512195121951217s"
+                            values="1.76 1;1 1"
+                            keyTimes="0;1"
+                            dur="2.4390243902439024s"
+                            repeatCount="indefinite"
+                        />
+                        <animate
+                            attributeName="fill-opacity"
+                            keyTimes="0;1"
+                            dur="2.4390243902439024s"
+                            repeatCount="indefinite"
+                            values="1;0"
+                            begin="-1.9512195121951217s"
+                        />
+                    </circle>
+                </g>
+            </g>
+            <g transform="translate(56.798373876248846,70.92324335849338)">
+                <g transform="rotate(72)">
+                    <circle
+                        cx={0}
+                        cy={0}
+                        r={6}
+                        fill="#c62266"
+                        fillOpacity="0.8"
+                    >
+                        <animateTransform
+                            attributeName="transform"
+                            type="scale"
+                            begin="-1.7073170731707314s"
+                            values="1.76 1;1 1"
+                            keyTimes="0;1"
+                            dur="2.4390243902439024s"
+                            repeatCount="indefinite"
+                        />
+                        <animate
+                            attributeName="fill-opacity"
+                            keyTimes="0;1"
+                            dur="2.4390243902439024s"
+                            repeatCount="indefinite"
+                            values="1;0"
+                            begin="-1.7073170731707314s"
+                        />
+                    </circle>
+                </g>
+            </g>
+            <g transform="translate(43.20162612375116,70.92324335849338)">
+                <g transform="rotate(108)">
+                    <circle
+                        cx={0}
+                        cy={0}
+                        r={6}
+                        fill="#c62266"
+                        fillOpacity="0.7"
+                    >
+                        <animateTransform
+                            attributeName="transform"
+                            type="scale"
+                            begin="-1.4634146341463412s"
+                            values="1.76 1;1 1"
+                            keyTimes="0;1"
+                            dur="2.4390243902439024s"
+                            repeatCount="indefinite"
+                        />
+                        <animate
+                            attributeName="fill-opacity"
+                            keyTimes="0;1"
+                            dur="2.4390243902439024s"
+                            repeatCount="indefinite"
+                            values="1;0"
+                            begin="-1.4634146341463412s"
+                        />
+                    </circle>
+                </g>
+            </g>
+            <g transform="translate(32.201626123751154,62.931275550434414)">
+                <g transform="rotate(144)">
+                    <circle
+                        cx={0}
+                        cy={0}
+                        r={6}
+                        fill="#c62266"
+                        fillOpacity="0.6"
+                    >
+                        <animateTransform
+                            attributeName="transform"
+                            type="scale"
+                            begin="-1.219512195121951s"
+                            values="1.76 1;1 1"
+                            keyTimes="0;1"
+                            dur="2.4390243902439024s"
+                            repeatCount="indefinite"
+                        />
+                        <animate
+                            attributeName="fill-opacity"
+                            keyTimes="0;1"
+                            dur="2.4390243902439024s"
+                            repeatCount="indefinite"
+                            values="1;0"
+                            begin="-1.219512195121951s"
+                        />
+                    </circle>
+                </g>
+            </g>
+            <g transform="translate(28,50)">
+                <g transform="rotate(180)">
+                    <circle
+                        cx={0}
+                        cy={0}
+                        r={6}
+                        fill="#c62266"
+                        fillOpacity="0.5"
+                    >
+                        <animateTransform
+                            attributeName="transform"
+                            type="scale"
+                            begin="-0.9756097560975608s"
+                            values="1.76 1;1 1"
+                            keyTimes="0;1"
+                            dur="2.4390243902439024s"
+                            repeatCount="indefinite"
+                        />
+                        <animate
+                            attributeName="fill-opacity"
+                            keyTimes="0;1"
+                            dur="2.4390243902439024s"
+                            repeatCount="indefinite"
+                            values="1;0"
+                            begin="-0.9756097560975608s"
+                        />
+                    </circle>
+                </g>
+            </g>
+            <g transform="translate(32.201626123751154,37.06872444956559)">
+                <g transform="rotate(216)">
+                    <circle
+                        cx={0}
+                        cy={0}
+                        r={6}
+                        fill="#c62266"
+                        fillOpacity="0.4"
+                    >
+                        <animateTransform
+                            attributeName="transform"
+                            type="scale"
+                            begin="-0.7317073170731706s"
+                            values="1.76 1;1 1"
+                            keyTimes="0;1"
+                            dur="2.4390243902439024s"
+                            repeatCount="indefinite"
+                        />
+                        <animate
+                            attributeName="fill-opacity"
+                            keyTimes="0;1"
+                            dur="2.4390243902439024s"
+                            repeatCount="indefinite"
+                            values="1;0"
+                            begin="-0.7317073170731706s"
+                        />
+                    </circle>
+                </g>
+            </g>
+            <g transform="translate(43.201626123751154,29.076756641506623)">
+                <g transform="rotate(252)">
+                    <circle
+                        cx={0}
+                        cy={0}
+                        r={6}
+                        fill="#c62266"
+                        fillOpacity="0.3"
+                    >
+                        <animateTransform
+                            attributeName="transform"
+                            type="scale"
+                            begin="-0.4878048780487804s"
+                            values="1.76 1;1 1"
+                            keyTimes="0;1"
+                            dur="2.4390243902439024s"
+                            repeatCount="indefinite"
+                        />
+                        <animate
+                            attributeName="fill-opacity"
+                            keyTimes="0;1"
+                            dur="2.4390243902439024s"
+                            repeatCount="indefinite"
+                            values="1;0"
+                            begin="-0.4878048780487804s"
+                        />
+                    </circle>
+                </g>
+            </g>
+            <g transform="translate(56.79837387624884,29.07675664150662)">
+                <g transform="rotate(288)">
+                    <circle
+                        cx={0}
+                        cy={0}
+                        r={6}
+                        fill="#c62266"
+                        fillOpacity="0.2"
+                    >
+                        <animateTransform
+                            attributeName="transform"
+                            type="scale"
+                            begin="-0.2439024390243902s"
+                            values="1.76 1;1 1"
+                            keyTimes="0;1"
+                            dur="2.4390243902439024s"
+                            repeatCount="indefinite"
+                        />
+                        <animate
+                            attributeName="fill-opacity"
+                            keyTimes="0;1"
+                            dur="2.4390243902439024s"
+                            repeatCount="indefinite"
+                            values="1;0"
+                            begin="-0.2439024390243902s"
+                        />
+                    </circle>
+                </g>
+            </g>
+            <g transform="translate(67.79837387624885,37.068724449565586)">
+                <g transform="rotate(324)">
+                    <circle
+                        cx={0}
+                        cy={0}
+                        r={6}
+                        fill="#c62266"
+                        fillOpacity="0.1"
+                    >
+                        <animateTransform
+                            attributeName="transform"
+                            type="scale"
+                            begin="0s"
+                            values="1.76 1;1 1"
+                            keyTimes="0;1"
+                            dur="2.4390243902439024s"
+                            repeatCount="indefinite"
+                        />
+                        <animate
+                            attributeName="fill-opacity"
+                            keyTimes="0;1"
+                            dur="2.4390243902439024s"
+                            repeatCount="indefinite"
+                            values="1;0"
+                            begin="0s"
+                        />
+                    </circle>
+                </g>
+            </g>
+        </svg>
+    );
+};
 
-export default edit_icons;
+export const plus_icons = (color = "#000000", size = "15px") => {
+    return (
+        <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            width={size}
+            height={size}
+            xmlns="http://www.w3.org/2000/svg"
+            stroke={color}
+            strokeWidth="0.00024000000000000003"
+        >
+            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+            <g
+                id="SVGRepo_tracerCarrier"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+                <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M13 9C13 8.44772 12.5523 8 12 8C11.4477 8 11 8.44772 11 9V11H9C8.44772 11 8 11.4477 8 12C8 12.5523 8.44772 13 9 13H11V15C11 15.5523 11.4477 16 12 16C12.5523 16 13 15.5523 13 15V13H15C15.5523 13 16 12.5523 16 12C16 11.4477 15.5523 11 15 11H13V9ZM7.25007 2.38782C8.54878 2.0992 10.1243 2 12 2C13.8757 2 15.4512 2.0992 16.7499 2.38782C18.06 2.67897 19.1488 3.176 19.9864 4.01358C20.824 4.85116 21.321 5.94002 21.6122 7.25007C21.9008 8.54878 22 10.1243 22 12C22 13.8757 21.9008 15.4512 21.6122 16.7499C21.321 18.06 20.824 19.1488 19.9864 19.9864C19.1488 20.824 18.06 21.321 16.7499 21.6122C15.4512 21.9008 13.8757 22 12 22C10.1243 22 8.54878 21.9008 7.25007 21.6122C5.94002 21.321 4.85116 20.824 4.01358 19.9864C3.176 19.1488 2.67897 18.06 2.38782 16.7499C2.0992 15.4512 2 13.8757 2 12C2 10.1243 2.0992 8.54878 2.38782 7.25007C2.67897 5.94002 3.176 4.85116 4.01358 4.01358C4.85116 3.176 5.94002 2.67897 7.25007 2.38782Z"
+                    fill={color}
+                ></path>
+            </g>
+        </svg>
+    );
+};

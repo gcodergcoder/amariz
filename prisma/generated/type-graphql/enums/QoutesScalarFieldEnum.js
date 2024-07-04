@@ -8,6 +8,7 @@ var QoutesScalarFieldEnum;
     QoutesScalarFieldEnum["id"] = "id";
     QoutesScalarFieldEnum["createdAt"] = "createdAt";
     QoutesScalarFieldEnum["updatedAt"] = "updatedAt";
+    QoutesScalarFieldEnum["expireAt"] = "expireAt";
     QoutesScalarFieldEnum["providerId"] = "providerId";
     QoutesScalarFieldEnum["agentProviderId"] = "agentProviderId";
 })(QoutesScalarFieldEnum || (exports.QoutesScalarFieldEnum = QoutesScalarFieldEnum = {}));

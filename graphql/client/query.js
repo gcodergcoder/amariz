@@ -1,6 +1,6 @@
 import { gql } from "@apollo/client";
 
-const LIST_PROVIDER = gql`
+const LIST_CLIENT = gql`
     query Query {
   findManyProviders {
     id
@@ -23,4 +23,4 @@ const LIST_PROVIDER = gql`
 }
 `;
 
-export { LIST_PROVIDER };
+export { LIST_CLIENT };

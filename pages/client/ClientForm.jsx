@@ -5,9 +5,9 @@ import useFormData from "@/hooks/useFormData";
 import { useMutation } from "@apollo/client";
 import useMutacionEffect from "@/hooks/useMutacionEffect";
 import { CREATE_CLIENT, UPDATE_CLIENT } from "@/graphql/client/mutation";
-import Modal from "./Modal";
+import Modal from "../../components/Modal";
 
-const Client = ({ setModal, refetch, detail = {}, cleanData }) => {
+const ClientForm = ({ setModal, refetch, detail = {}, cleanData }) => {
     const [loadingG, setLoadingG] = useState(false);
     const { form, formData, updateFormData } = useFormData({});
     const { mutationEffect } = useMutacionEffect(null);
@@ -58,7 +58,7 @@ const Client = ({ setModal, refetch, detail = {}, cleanData }) => {
         <form onSubmit={submitForm} onChange={updateFormData} ref={form}>
             <Modal
                 closeModal={setModal}
-                title={"Provedores"}
+                title={"Cliente"}
                 loading={loadingG}
                 showCancelBtt={formData}
                 cleanData={cleanData}
@@ -87,11 +87,11 @@ const Client = ({ setModal, refetch, detail = {}, cleanData }) => {
     );
 };
 
-Client.propTypes = {
+ClientForm.propTypes = {
     setModal: PropTypes.func,
     refetch: PropTypes.func,
     cleanData: PropTypes.func,
     detail: PropTypes.object,
 };
 
-export default Client;
+export default ClientForm;

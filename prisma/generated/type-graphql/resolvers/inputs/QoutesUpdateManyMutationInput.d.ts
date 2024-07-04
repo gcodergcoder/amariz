@@ -4,4 +4,5 @@ export declare class QoutesUpdateManyMutationInput {
     id?: StringFieldUpdateOperationsInput | undefined;
     createdAt?: DateTimeFieldUpdateOperationsInput | undefined;
     updatedAt?: DateTimeFieldUpdateOperationsInput | undefined;
+    expireAt?: DateTimeFieldUpdateOperationsInput | undefined;
 }

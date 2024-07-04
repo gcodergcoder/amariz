@@ -6,6 +6,7 @@ export declare class Qoutes {
     id: string;
     createdAt: Date;
     updatedAt: Date;
+    expireAt: Date;
     provider?: Providers;
     providerId: string;
     agentProvider?: AgentProvider;

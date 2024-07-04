@@ -5,13 +5,10 @@ export default function Home() {
     return (
         <>
             <title>Amariz Agency | SYS</title>
+            <meta name="viewport" content="width=device-width, initial-scale=0.1"/>
             <meta
                 name="description"
                 content="Trámites y reprogramación de citas"
-            />
-            <meta
-                name="viewport"
-                content="width=device-width, initial-scale=1"
             />
             <link rel="icon" href="/favicon.ico" />
 
@@ -19,12 +16,12 @@ export default function Home() {
                 <ul>
                     <li>
                         <Link href={"/client"}>
-                            <span className="underline">provedores</span>
+                            <span className="underline">Clientes</span>
                         </Link>
                     </li>
                     <li>
                         <Link href={"/quotes"}>
-                            <span className="underline ">cotizaciones</span>
+                            <span className="underline ">Cotizaciones</span>
                         </Link>
                     </li>
                 </ul>
