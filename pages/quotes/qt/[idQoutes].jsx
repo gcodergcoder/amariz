@@ -14,14 +14,9 @@ import { isObject } from "class-validator";
 import Link from "next/link";
 import Xmark from "../../../utlis/Icons/Xmark";
 import {
-    edit_icons,
-    xmark_icons,
     save_icons,
     loadingP_icons,
     sping_icon,
-    plus_icons,
-    pdf_icons,
-    point_icon,
 } from "../../../utlis/icons";
 import { InputsTable } from "../../../components/InputsTable";
 import useMutacionEffect from "@/hooks/useMutacionEffect";
@@ -396,8 +391,20 @@ const Index = () => {
                                         <span className="font-semibold pr-2">
                                             Fecha vencimiento:
                                         </span>
-                                        <span>{newDate}</span>
-                                        <DateAdder initialDate={data?.findUniqueQoutes?.createdAt.slice(0,10)} newDate={newDate} setNewDate={setNewDate}/>
+                                        <span>{data?.findUniqueQoutes?.expireAt.slice(
+                                                0,
+                                                10
+                                            )}</span>
+                                        <DateAdder
+                                            initialDate={data?.findUniqueQoutes?.createdAt.slice(
+                                                0,
+                                                10
+                                            )}
+                                            newDate={newDate}
+                                            setNewDate={setNewDate}
+                                            refetch={refetch}
+                                            idQoute={idQoutes}
+                                        />
                                     </li>
                                 </ul>
                             </div>

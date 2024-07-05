@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { usePDF } from "react-to-pdf";
 import { QOUTE_BY_ID } from "../../graphql/qoutes/query";
 import { useRouter } from "next/router";
 import useParseDate from "../../hooks/useParceDate";
@@ -19,8 +18,7 @@ const ViewPDF = () => {
       "Iva (19%)": 0.0,
       TOTAL: 0.0,
    });
-   const { toPDF, targetRef } = usePDF({ filename: "page.pdf" });
-   const { data, error, loading } = useQuery(QOUTE_BY_ID, {
+   const { data, loading } = useQuery(QOUTE_BY_ID, {
       variables: {
          where: {
             id: idViewPdf,
@@ -28,12 +26,12 @@ const ViewPDF = () => {
       },
    });
 
-   const testDelete = () =>{
-      window.print()
-   }
+   const testDelete = () => {
+      window.print();
+   };
 
    useEffect(() => {
-      if (suma.TOTAL != 0) toPDF();
+      if (suma.TOTAL != 0);
    }, [suma]);
 
    useEffect(() => {
@@ -67,12 +65,16 @@ const ViewPDF = () => {
          />
          <div>
             <div className="flex justify-between content-center items-center mb-10">
-               <div className="w-40 h-44 bg-cover bg-logo-img"></div>
+               <button
+                  onClick={() => {
+                     testDelete();
+                  }}
+                  className="w-40 h-44 bg-cover bg-logo-img"
+               ></button>
                <h1 className="font-semibold text-5xl text-neutral-800">
                   COTIZACIÓN
                </h1>
             </div>
-            <button onClick={()=>{testDelete()}}>holaaa</button>
             <div className="flex justify-between mb-10">
                <div className="flex-col justify-between">
                   <h6 className="uppercase text-xs font-normal">
@@ -136,7 +138,9 @@ const ViewPDF = () => {
                      <li className="font-medium">
                         {"Vence: "}
                         <span className="font-normal text-gray-700">
-                           {dateParsed}
+                        {
+                              data?.findUniqueQoutes?.expireAt?.slice(0,10)
+                           }
                         </span>
                      </li>
                   </ul>
@@ -182,19 +186,26 @@ const ViewPDF = () => {
             </table>
          </div>
          <div className="flex justify-between mt-20 text-xs">
-            <div className="flex-col w-8/12 px-20">
+            <div className="flex-col w-8/12 pl-10 pr-20">
                <h6 className="mb-4 font-semibold">
                   Términos & Condiciones
                </h6>
                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Minus officiis aliquid deleniti. Minus velit a provident
-                  eos necessitatibus, hic optio, sequi omnis nesciunt
-                  repudiandae aut ea perspiciatis voluptatem fuga! Quod?
+                  La aceptación de esta cotización implica la aceptación
+                  de todos los términos y condiciones aquí expuestos. Esta
+                  cotización es válida por un período correspondiente a la fecha de vencimeinto. Los precios indicados son
+                  en COP y pueden estar sujetos a revisión en caso de
+                  cambios en las especificaciones del proyecto. El cliente
+                  deberá realizar un pago inicial del 50% del
+                  valor total al momento de la aceptación, y el saldo
+                  restante según los términos pactados. En caso de cancelación del
+                  proyecto por parte del cliente después de la aceptación,
+                  el cliente será responsable de los costos incurridos
+                  hasta la fecha de cancelación.
                </p>
             </div>
             <div className="flex-col w-4/12">
-               <span></span>
+               <div className="h-20 bg-firma-img bg-contain bg-no-repeat bg-center"></div>
                <ul className="text-center mt-2 border-t border-gray-300">
                   <li className="font-semibold mt-4">Andrea Amariz</li>
                   <li>Gerente</li>
@@ -225,7 +236,7 @@ const Tf = ({ value, suma }) => {
 
    useEffect(() => {
       if (value == "TOTAL") {
-         setBg("bg-gray-500 text-white");
+         setBg("bg-gray-300");
       }
    }, [value]);
 

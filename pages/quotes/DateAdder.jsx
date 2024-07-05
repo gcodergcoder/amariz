@@ -1,9 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { ButtonIcon } from "../../components/ButtonIcon";
+import { UPDATE_QOUTES } from "@/graphql/qoutes/mutation";
 import Check from "../../utlis/Icons/Check";
+import { useMutation } from "@apollo/client";
+import useMutacionEffect from "@/hooks/useMutacionEffect";
 
-const DateAdder = ({ initialDate, setNewDate }) => {
+const DateAdder = ({ initialDate, setNewDate, idQoute, refetch }) => {
     const [daysToAdd, setDaysToAdd] = useState(0);
+    const { mutationEffect } = useMutacionEffect(null);
+    const [update, { data, error, loading }] =
+        useMutation(UPDATE_QOUTES);
 
     const handleDaysChange = (e) => {
         setDaysToAdd(parseInt(e.target.value, 10));
@@ -11,7 +17,7 @@ const DateAdder = ({ initialDate, setNewDate }) => {
 
     const addDays = (date, days) => {
         const result = new Date(date);
-        result.setDate(result.getDate() + (days+1));
+        result.setDate(result.getDate() + (days + 1));
         return result;
     };
 
@@ -26,8 +32,28 @@ const DateAdder = ({ initialDate, setNewDate }) => {
         e.preventDefault();
         const resultDate = addDays(new Date(initialDate), daysToAdd);
         setNewDate(formatDate(resultDate));
+        console.log('resultDate :', resultDate);
+        console.log('idQoute :', idQoute);
+        update({
+            variables: {
+                data: {
+                    expireAt: {
+                        set: resultDate,
+                    },
+                },
+                where: {
+                    id: idQoute,
+                },
+            },
+        });
     };
 
+
+    useEffect(() => {
+        if (data || error) {
+            mutationEffect(data, error, refetch);
+        }
+    }, [data, error]);
     return (
         <div>
             <form onSubmit={handleSubmit}>
@@ -44,11 +70,11 @@ const DateAdder = ({ initialDate, setNewDate }) => {
                         />
                     </label>
                     <ButtonIcon
-                    css="mx-4"
-                    Icon={Check}
-                    type="submit"
-                    onclick={() => {}}
-                />
+                        css="mx-4"
+                        Icon={Check}
+                        type="submit"
+                        onclick={() => {}}
+                    />
                 </div>
             </form>
         </div>
