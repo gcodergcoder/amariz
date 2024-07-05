@@ -5,6 +5,7 @@ const QOUTES = gql`
   findManyQoutes {
     id
     createdAt
+    expireAt
     provider {
       name
     }
@@ -31,6 +32,7 @@ const QOUTE_BY_ID = gql`
       phone
     }
     createdAt
+    expireAt
     provider {
       nit
       name

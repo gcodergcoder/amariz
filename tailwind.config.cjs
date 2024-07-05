@@ -89,6 +89,7 @@ module.exports = {
             },
             backgroundImage: {
                 "logo-img": "url('/img/logo4.jpg')",
+                "firma-img": "url('/img/FirmaAndrea.jpg')",
                 },
             keyframes: {
                 bounce_horizontal: {
