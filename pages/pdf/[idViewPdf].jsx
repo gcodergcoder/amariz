@@ -12,9 +12,13 @@ const header = ["Id", "Descripción", "Cantidad", "Precio", "Total"];
 const ViewPDF = () => {
    const router = useRouter();
    const { idViewPdf } = router.query;
-   const { parseDate } = useParseDate()
-   const [dateParsed, setDateParsed] = useState("")
-   const [suma, setSuma] = useState({"Sub Total": 0.0, "Iva (19%)": 0.0, "TOTAL": 0.0 })
+   const { parseDate } = useParseDate();
+   const [dateParsed, setDateParsed] = useState("");
+   const [suma, setSuma] = useState({
+      "Sub Total": 0.0,
+      "Iva (19%)": 0.0,
+      TOTAL: 0.0,
+   });
    const { toPDF, targetRef } = usePDF({ filename: "page.pdf" });
    const { data, error, loading } = useQuery(QOUTE_BY_ID, {
       variables: {
@@ -24,46 +28,59 @@ const ViewPDF = () => {
       },
    });
 
-   useEffect(() => {
-      if(suma.TOTAL != 0)toPDF()
-   }, [suma])
+   const testDelete = () =>{
+      window.print()
+   }
 
    useEffect(() => {
-      if(data){
-         setDateParsed(parseDate(data?.findUniqueQoutes?.createdAt))
+      if (suma.TOTAL != 0) toPDF();
+   }, [suma]);
+
+   useEffect(() => {
+      if (data) {
+         setDateParsed(parseDate(data?.findUniqueQoutes?.createdAt));
       }
-      let subtotal = 0
-      data?.findUniqueQoutes?.qoutesDetails?.map((value)=>{
-         subtotal = subtotal + (value.unit*value.price)
-      })
-      setSuma({"Sub Total": subtotal, "Iva (19%)": subtotal*0.19, "TOTAL": subtotal*1.19 })
-   }, [data])
+      let subtotal = 0;
+      data?.findUniqueQoutes?.qoutesDetails?.map((value) => {
+         subtotal = subtotal + value.unit * value.price;
+      });
+      setSuma({
+         "Sub Total": subtotal,
+         "Iva (19%)": subtotal * 0.19,
+         TOTAL: subtotal * 1.19,
+      });
+   }, [data]);
 
    if (loading) {
       return (
-          <div className="flex h-screen w-full content-center">
-              {sping_icon()}
-          </div>
-      )
-  }
+         <div className="flex h-screen w-full content-center">
+            {sping_icon()}
+         </div>
+      );
+   }
 
    return (
-      <div ref={targetRef} className="px-32">
-         <meta name="viewport" content="width=device-width, initial-scale=0.3"/>
+      <div className="px-10">
+         <meta
+            name="viewport"
+            content="width=device-width, initial-scale=0.3"
+         />
          <div>
             <div className="flex justify-between content-center items-center mb-10">
-               <div className="w-40 h-44 bg-cover bg-logo-img">
-               </div>
+               <div className="w-40 h-44 bg-cover bg-logo-img"></div>
                <h1 className="font-semibold text-5xl text-neutral-800">
                   COTIZACIÓN
                </h1>
             </div>
+            <button onClick={()=>{testDelete()}}>holaaa</button>
             <div className="flex justify-between mb-10">
                <div className="flex-col justify-between">
                   <h6 className="uppercase text-xs font-normal">
                      DESTINO A
                   </h6>
-                  <h2 className="text-2xl font-bold pr-10">{data?.findUniqueQoutes?.provider?.name}</h2>
+                  <h2 className="text-2xl font-bold pr-10">
+                     {data?.findUniqueQoutes?.provider?.name}
+                  </h2>
                   <h6 className="border-b-[0.5px] border-gray-400 pb-4 text-xxs">
                      {"NIT: "}
                      <span>{data?.findUniqueQoutes?.provider?.nit}</span>
@@ -72,19 +89,28 @@ const ViewPDF = () => {
                      <li className="font-medium">
                         {"Ejecutivo: "}
                         <span className="font-normal text-gray-700">
-                           {data?.findUniqueQoutes?.agentProvider?.name}
+                           {
+                              data?.findUniqueQoutes?.agentProvider
+                                 ?.name
+                           }
                         </span>
                      </li>
                      <li className="font-medium">
                         {"Teléfono: "}
                         <span className="font-normal text-gray-700">
-                           {data?.findUniqueQoutes?.agentProvider?.phone}
+                           {
+                              data?.findUniqueQoutes?.agentProvider
+                                 ?.phone
+                           }
                         </span>
                      </li>
                      <li className="font-medium">
                         {"Email: "}
                         <span className="font-normal text-gray-700">
-                        {data?.findUniqueQoutes?.agentProvider?.email}
+                           {
+                              data?.findUniqueQoutes?.agentProvider
+                                 ?.email
+                           }
                         </span>
                      </li>
                   </ul>
@@ -94,13 +120,15 @@ const ViewPDF = () => {
                      <li className="font-medium">
                         {"Cotización Nº : "}
                         <span className="font-normal text-gray-700">
-                           {data?.findUniqueQoutes?.id?.slice(0,10)}
+                           {data?.findUniqueQoutes?.id?.slice(0, 10)}
                         </span>
                      </li>
                      <li className="font-medium">
                         {"Fecha: "}
                         <span className="font-normal text-gray-700">
-                           {parseDate(data?.findUniqueQoutes?.createdAt)}
+                           {parseDate(
+                              data?.findUniqueQoutes?.createdAt
+                           )}
                         </span>
                      </li>
                   </ul>
@@ -119,7 +147,10 @@ const ViewPDF = () => {
                   <tr className="bg-gray-700 text-white">
                      {header.map((k) => {
                         return (
-                           <th key={k} className="px-2 py-4 w-auto uppercase text-xs font-semibold">
+                           <th
+                              key={k}
+                              className="px-2 py-4 w-auto uppercase text-xs font-semibold"
+                           >
                               {k}
                            </th>
                         );
@@ -129,7 +160,17 @@ const ViewPDF = () => {
                <tbody className="font-light text-xs">
                   {data?.findUniqueQoutes?.qoutesDetails.map((j) => {
                      return (
-                        <Td key={j.id} value={j} qoutesDetails={data?.findUniqueQoutes?.qoutesDetails} len={data?.findUniqueQoutes?.qoutesDetails?.length} />
+                        <Td
+                           key={j.id}
+                           value={j}
+                           qoutesDetails={
+                              data?.findUniqueQoutes?.qoutesDetails
+                           }
+                           len={
+                              data?.findUniqueQoutes?.qoutesDetails
+                                 ?.length
+                           }
+                        />
                      );
                   })}
                </tbody>
@@ -142,8 +183,15 @@ const ViewPDF = () => {
          </div>
          <div className="flex justify-between mt-20 text-xs">
             <div className="flex-col w-8/12 px-20">
-               <h6 className="mb-4 font-semibold">Términos & Condiciones</h6>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus officiis aliquid deleniti. Minus velit a provident eos necessitatibus, hic optio, sequi omnis nesciunt repudiandae aut ea perspiciatis voluptatem fuga! Quod?</p>
+               <h6 className="mb-4 font-semibold">
+                  Términos & Condiciones
+               </h6>
+               <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Minus officiis aliquid deleniti. Minus velit a provident
+                  eos necessitatibus, hic optio, sequi omnis nesciunt
+                  repudiandae aut ea perspiciatis voluptatem fuga! Quod?
+               </p>
             </div>
             <div className="flex-col w-4/12">
                <span></span>
@@ -174,7 +222,7 @@ const ViewPDF = () => {
 const Tf = ({ value, suma }) => {
    const [bg, setBg] = useState("");
    const { parcePrice } = useParsePrice();
-   
+
    useEffect(() => {
       if (value == "TOTAL") {
          setBg("bg-gray-500 text-white");
@@ -199,15 +247,15 @@ const Tf = ({ value, suma }) => {
 };
 
 const Td = ({ value, len, qoutesDetails }) => {
-   const index = qoutesDetails.findIndex(object => object.id == value.id);
+   const index = qoutesDetails.findIndex((object) => object.id == value.id);
    const [bg, setBg] = useState("");
    const [border, setBorder] = useState("");
    const { parcePrice } = useParsePrice();
    useEffect(() => {
-      console.log('index :', (index + 1) % 2);
+      console.log("index :", (index + 1) % 2);
       if ((index + 1) % 2 == 0) {
          setBg("bg-gray-100");
-      }else{
+      } else {
          setBg("");
       }
       if (index + 1 == len) {
@@ -221,14 +269,12 @@ const Td = ({ value, len, qoutesDetails }) => {
             {value.id.slice(-1)}
          </td>
          <td className={` ${bg} ${border} p-3`}>{value.description}</td>
+         <td className={` ${bg} ${border} p-3 text-center`}>{value.unit}</td>
          <td className={` ${bg} ${border} p-3 text-center`}>
-            {value.unit}
+            {parcePrice(value.price)}
          </td>
          <td className={` ${bg} ${border} p-3 text-center`}>
-         {parcePrice(value.price)}
-         </td>
-         <td className={` ${bg} ${border} p-3 text-center`}>
-         {parcePrice(value.price * value.unit)}
+            {parcePrice(value.price * value.unit)}
          </td>
       </tr>
    );
